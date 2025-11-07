@@ -23,6 +23,17 @@ import type { ProjectConfig } from "../types.js";
  */
 export const initCommand = async (targetPath: string): Promise<void> => {
   try {
+    // ASCII art banner
+    console.log(chalk.cyan(`
+███████╗██╗   ██╗██████╗ ███████╗██████╗  █████╗  ██████╗ ███████╗███████╗███╗   ██╗████████╗███████╗
+██╔════╝██║   ██║██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝ ██╔════╝██╔════╝████╗  ██║╚══██╔══╝██╔════╝
+███████╗██║   ██║██████╔╝█████╗  ██████╔╝███████║██║  ███╗█████╗  █████╗  ██╔██╗ ██║   ██║   ███████╗
+╚════██║██║   ██║██╔═══╝ ██╔══╝  ██╔══██╗██╔══██║██║   ██║██╔══╝  ██╔══╝  ██║╚██╗██║   ██║   ╚════██║
+███████║╚██████╔╝██║     ███████╗██║  ██║██║  ██║╚██████╔╝███████╗███████╗██║ ╚████║   ██║   ███████║
+╚══════╝ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+    `));
+    console.log(chalk.bold.gray("                         Building the future of AI agents\n"));
+
     const config: ProjectConfig = await collectConfig();
     const absolutePath = path.resolve(process.cwd(), targetPath);
 
