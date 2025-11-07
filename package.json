@@ -1,0 +1,60 @@
+{
+  "name": "@langwatch/superagents",
+  "version": "0.1.0",
+  "description": "CLI for kicking off production-ready agent projects with LangWatch best practices",
+  "type": "module",
+  "bin": {
+    "superagents": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "pnpm build",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write 'src/**/*.ts'",
+    "lint": "eslint 'src/**/*.ts'"
+  },
+  "keywords": [
+    "langwatch",
+    "agents",
+    "cli",
+    "ai",
+    "testing",
+    "llm",
+    "agent-framework",
+    "agno",
+    "mastra",
+    "prompt-management",
+    "scenario-testing",
+    "mcp",
+    "model-context-protocol",
+    "ai-testing",
+    "evaluation"
+  ],
+  "author": "LangWatch",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/langwatch/superagents.git"
+  },
+  "bugs": {
+    "url": "https://github.com/langwatch/superagents/issues"
+  },
+  "homepage": "https://github.com/langwatch/superagents#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "@inquirer/prompts": "^7.2.0",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "ora": "^8.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
