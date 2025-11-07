@@ -1,8 +1,12 @@
 import * as fs from "fs/promises";
 import * as path from "path";
 import { expect } from "vitest";
+import { exec } from "child_process";
+import { promisify } from "util";
 import { spawnCLI } from "./spawn-cli.js";
 import { createTempDir, cleanupTempDir } from "./temp-dir.js";
+
+const execAsync = promisify(exec);
 
 /**
  * Fluent test runner for CLI interactions.
@@ -32,6 +36,13 @@ export class CLITestRunner {
   private snapshotExpectations: Array<{
     file: string;
     snapshot?: string;
+  }> = [];
+  private execCommands: Array<{
+    command: string;
+    cwd?: string;
+    env?: Record<string, string>;
+    expectSuccess?: boolean;
+    expectOutput?: RegExp | string;
   }> = [];
   private tmpDir?: string;
   private projectPath?: string;
@@ -159,6 +170,41 @@ export class CLITestRunner {
   }
 
   /**
+   * Execute a command in the generated project directory.
+   *
+   * @param command - Shell command to execute
+   * @param options - Execution options
+   * @returns This runner for chaining
+   *
+   * @example
+   * ```ts
+   * runner.exec('pnpm install', { expectSuccess: true })
+   * runner.exec('pnpm test', {
+   *   expectSuccess: true,
+   *   expectOutput: /PASS.*scenario/
+   * })
+   * ```
+   */
+  exec(
+    command: string,
+    options?: {
+      cwd?: string;
+      env?: Record<string, string>;
+      expectSuccess?: boolean;
+      expectOutput?: RegExp | string;
+    }
+  ): this {
+    this.execCommands.push({
+      command,
+      cwd: options?.cwd,
+      env: options?.env,
+      expectSuccess: options?.expectSuccess,
+      expectOutput: options?.expectOutput,
+    });
+    return this;
+  }
+
+  /**
    * Execute the CLI command and verify all expectations.
    *
    * @returns Promise that resolves when test completes
@@ -169,8 +215,13 @@ export class CLITestRunner {
    * ```
    */
   async run(): Promise<void> {
-    this.tmpDir = await createTempDir();
-    this.projectPath = path.join(this.tmpDir, "test-project");
+    const tmpDir = await createTempDir();
+    this.tmpDir = tmpDir;
+
+    // Extract project name from args (e.g., 'init project-name')
+    const projectName =
+      this.args[0] === "init" && this.args[1] ? this.args[1] : "test-project";
+    this.projectPath = path.join(tmpDir, projectName);
 
     // Build input stream from interactions
     const inputs = this.interactions
@@ -180,29 +231,39 @@ export class CLITestRunner {
     const result = await spawnCLI({
       args: this.args,
       inputs,
-      cwd: this.tmpDir,
+      cwd: tmpDir,
     });
 
-    // Verify prompts and outputs
+    // Verify prompts and outputs in order
+    let lastIndex = 0;
     for (const interaction of this.interactions) {
       if (
         interaction.type === "expectPrompt" ||
         interaction.type === "expectOutput"
       ) {
-        expect(result.stdout).toContain(interaction.value);
+        const foundIndex = result.stdout.indexOf(interaction.value, lastIndex);
+        expect(
+          foundIndex,
+          `Expected to find "${
+            interaction.value
+          }" after index ${lastIndex}, but it was ${
+            foundIndex === -1 ? "not found" : "found earlier"
+          }`
+        ).toBeGreaterThanOrEqual(lastIndex);
+        lastIndex = foundIndex + interaction.value.length;
       }
     }
 
     // Verify files exist
     for (const file of this.fileExpectations) {
-      const filePath = path.join(this.projectPath, file);
+      const filePath = path.join(this.projectPath ?? this.tmpDir, file);
       await expect(fs.access(filePath)).resolves.not.toThrow();
     }
 
     // Verify file contents
     for (const { file, contains } of this.contentExpectations) {
       const content = await fs.readFile(
-        path.join(this.projectPath, file),
+        path.join(this.projectPath ?? this.tmpDir, file),
         "utf-8"
       );
       expect(content).toContain(contains);
@@ -211,7 +272,7 @@ export class CLITestRunner {
     // Verify snapshots
     for (const { file, snapshot } of this.snapshotExpectations) {
       const content = await fs.readFile(
-        path.join(this.projectPath, file),
+        path.join(this.projectPath ?? this.tmpDir, file),
         "utf-8"
       );
       // Normalize line endings and trim for consistency
@@ -221,6 +282,39 @@ export class CLITestRunner {
         expect(normalized).toMatchInlineSnapshot(snapshot);
       } else {
         expect(normalized).toMatchInlineSnapshot();
+      }
+    }
+
+    // Execute commands
+    for (const cmd of this.execCommands) {
+      const execCwd = cmd.cwd
+        ? path.join(this.projectPath ?? this.tmpDir, cmd.cwd)
+        : this.projectPath ?? this.tmpDir;
+
+      try {
+        const execResult = await execAsync(cmd.command, {
+          cwd: execCwd,
+          env: { ...process.env, ...cmd.env },
+        });
+
+        if (cmd.expectSuccess) {
+          expect(execResult).toBeDefined();
+        }
+
+        if (cmd.expectOutput) {
+          const output = execResult.stdout + execResult.stderr;
+          if (typeof cmd.expectOutput === "string") {
+            expect(output).toContain(cmd.expectOutput);
+          } else {
+            expect(output).toMatch(cmd.expectOutput);
+          }
+        }
+      } catch (error: any) {
+        if (cmd.expectSuccess) {
+          throw new Error(
+            `Command "${cmd.command}" failed:\nstdout: ${error.stdout}\nstderr: ${error.stderr}`
+          );
+        }
       }
     }
 
