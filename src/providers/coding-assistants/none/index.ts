@@ -29,11 +29,17 @@ export const NoneCodingAssistantProvider: CodingAssistantProvider = {
     await fs.writeFile(claudeMdPath, claudeMdContent);
   },
 
-  async launch({ projectPath, prompt }: { projectPath: string; prompt: string }): Promise<void> {
+  async launch(_params: {
+    projectPath: string;
+    prompt: string;
+  }): Promise<void> {
     const chalk = (await import("chalk")).default;
 
     // No auto-launch - just show instructions
-    console.log(chalk.gray('When you\'re ready, use the initial prompt above with your coding assistant.\n'));
+    console.log(
+      chalk.gray(
+        "When you're ready, use the initial prompt above with your coding assistant.\n"
+      )
+    );
   },
 };
-

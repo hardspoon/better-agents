@@ -21,14 +21,20 @@ export const CursorCodingAssistantProvider: CodingAssistantProvider = {
     await fs.writeFile(mcpConfigPath, JSON.stringify(config, null, 2));
   },
 
-  async launch({ projectPath, prompt }: { projectPath: string; prompt: string }): Promise<void> {
+  async launch({
+    projectPath,
+  }: {
+    projectPath: string;
+    prompt: string;
+  }): Promise<void> {
     const chalk = (await import("chalk")).default;
 
     // Cursor doesn't support CLI launching, show instructions instead
-    console.log(chalk.yellow('To start with Cursor:\n'));
+    console.log(chalk.yellow("To start with Cursor:\n"));
     console.log(chalk.cyan(`  1. Open Cursor`));
     console.log(chalk.cyan(`  2. Open the folder: ${projectPath}`));
-    console.log(chalk.cyan(`  3. Use the initial prompt above with Cursor Composer\n`));
+    console.log(
+      chalk.cyan(`  3. Use the initial prompt above with Cursor Composer\n`)
+    );
   },
 };
-
