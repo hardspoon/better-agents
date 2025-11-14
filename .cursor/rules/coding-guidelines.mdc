@@ -18,3 +18,4 @@ DIRECTIVES:
 - functions, classes, methods should have TSDoc with example usage
 - top-level directories represent core features, and should each have a README.md that describes the feature and its purpose.
 - Never use .js extensions in import statements
+- Always use package init commands rather than writing configs manually (e.g., use `npx eslint --init` or `pnpm exec husky init` instead of creating config files directly)

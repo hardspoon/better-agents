@@ -1,6 +1,6 @@
 {
   "name": "@langwatch/superagents",
-  "version": "0.1.0",
+  "version": "0.1.0-beta.0",
   "description": "CLI for kicking off production-ready agent projects with LangWatch best practices",
   "type": "module",
   "main": "./dist/index.js",
@@ -32,7 +32,13 @@
     "test:unit": "vitest --config vitest.config.ts",
     "test:e2e": "vitest --config vitest.e2e.config.ts",
     "test:watch": "vitest --watch",
-    "test:ci": "vitest --run"
+    "test:ci": "vitest --run",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix"
+    ]
   },
   "keywords": [
     "langwatch",
@@ -82,6 +88,10 @@
     "globals": "^16.5.0",
     "jiti": "^2.6.1",
     "tsup": "^8.5.1",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.46.4",

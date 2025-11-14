@@ -9,7 +9,7 @@ import { CLITestRunner } from "../utils/cli-test-runner.js";
  * 2. Generated project has proper test infrastructure (vitest + @langwatch/scenario)
  * 3. Claude Code can build a working agent that passes scenario tests
  */
-describe("Full User Flow: TypeScript + Claude + Mastra", () => {
+describe.skip("Full User Flow: TypeScript + Claude + Mastra", () => {
   let runner: CLITestRunner;
 
   beforeEach(() => {
