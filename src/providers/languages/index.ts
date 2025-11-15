@@ -28,8 +28,8 @@ export interface LanguageProvider {
 }
 
 const PROVIDERS: Record<string, LanguageProvider> = {
-  python: PythonLanguageProvider,
   typescript: TypeScriptLanguageProvider,
+  python: PythonLanguageProvider,
 };
 
 /**

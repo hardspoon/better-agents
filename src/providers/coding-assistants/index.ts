@@ -51,9 +51,9 @@ export interface CodingAssistantProvider {
 }
 
 const PROVIDERS: Record<string, CodingAssistantProvider> = {
+  kilocode: KilocodeCodingAssistantProvider,
   "claude-code": ClaudeCodingAssistantProvider,
   cursor: CursorCodingAssistantProvider,
-  kilocode: KilocodeCodingAssistantProvider,
   none: NoneCodingAssistantProvider,
 };
 

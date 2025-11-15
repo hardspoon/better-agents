@@ -13,7 +13,7 @@ import type { ProgrammingLanguage } from "../../types.js";
  */
 export const buildLanguageChoices = () => {
   return [
-    { name: "Python", value: "python" as ProgrammingLanguage },
     { name: "TypeScript", value: "typescript" as ProgrammingLanguage },
+    { name: "Python", value: "python" as ProgrammingLanguage },
   ];
 };
