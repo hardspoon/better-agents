@@ -1,6 +1,6 @@
 # Philosophy
 
-Superagents promotes the **Agent Testing Pyramid** approach:
+Better Agents promotes the **Agent Testing Pyramid** approach:
 
 1. **Unit Tests** - Test deterministic components
 2. **Evals & Optimization** - Measure and optimize probabilistic components

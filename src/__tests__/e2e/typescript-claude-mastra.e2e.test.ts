@@ -5,7 +5,7 @@ import { CLITestRunner } from "../utils/cli-test-runner.js";
  * Full happy-path E2E test for TypeScript + Claude + Mastra flow.
  *
  * This test validates the complete workflow:
- * 1. superagents init creates project scaffolding
+ * 1. better-agents init creates project scaffolding
  * 2. Generated project has proper test infrastructure (vitest + @langwatch/scenario)
  * 3. Claude Code can build a working agent that passes scenario tests
  */

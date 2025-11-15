@@ -25,7 +25,7 @@ export interface Spinner {
 }
 
 /**
- * Unified logging interface for Superagents.
+ * Unified logging interface for Better Agents.
  *
  * This logger provides both user-facing console output (with colors and formatting)
  * and structured debug logging (JSON format for analysis and debugging).

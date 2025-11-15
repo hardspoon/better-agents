@@ -1,7 +1,7 @@
 import { describe, it, beforeEach, afterEach } from "vitest";
 import { CLITestRunner } from "../utils/cli-test-runner.js";
 
-describe("superagents init - complete user flow", () => {
+describe("better-agents init - complete user flow", () => {
   let runner: CLITestRunner;
 
   beforeEach(() => {
@@ -17,7 +17,7 @@ describe("superagents init - complete user flow", () => {
     // When implemented:
     // await runner
     //   .command('init', 'test-project')
-    //   .expectPrompt('Welcome to Superagents')
+    //   .expectPrompt('Welcome to Better Agents')
     //   .expectPrompt('What programming language')
     //   .input('typescript')
     //   .expectPrompt('What agent framework')

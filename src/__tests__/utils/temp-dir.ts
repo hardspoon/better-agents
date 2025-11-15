@@ -16,7 +16,7 @@ import * as os from "os";
  */
 export const createTempDir = async (): Promise<string> => {
   const tmpDir = await fs.mkdtemp(
-    path.join(os.tmpdir(), "superagents-test-")
+    path.join(os.tmpdir(), "better-agents-test-")
   );
   return tmpDir;
 };

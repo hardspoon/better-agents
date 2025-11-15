@@ -6,7 +6,7 @@
 
 _**User (2025-11-07 11:18Z)**_
 
-We need an AGENTS.md file explaining to the LLM what it should be doing in this repo. Propose a simple one. 
+We need an AGENTS.md file explaining to the LLM what it should be doing in this repo. Propose a simple one.
 
 ---
 
@@ -15,7 +15,7 @@ _**Agent (model claude-4.5-sonnet-thinking, mode Ask)**_
 <think><details><summary>Thought Process</summary>
 The user wants me to propose an AGENTS.md file for this repo. Let me first understand what this repo does by looking at key files.
 
-Based on the project layout, this seems to be a "superagents" project. Let me read some key files to understand what it does:
+Based on the project layout, this seems to be a "better-agents" project. Let me read some key files to understand what it does:
 - README.md
 - PROJECT_SUMMARY.md
 - src/index.ts
@@ -33,7 +33,7 @@ Let me gather context first.</details></think>
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/README.md</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/README.md</summary>
 
 </details>
 </tool-use>
@@ -41,7 +41,7 @@ Let me gather context first.</details></think>
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/PROJECT_SUMMARY.md</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/PROJECT_SUMMARY.md</summary>
 
 </details>
 </tool-use>
@@ -49,7 +49,7 @@ Let me gather context first.</details></think>
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/package.json</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/package.json</summary>
 
 </details>
 </tool-use>
@@ -57,7 +57,7 @@ Let me gather context first.</details></think>
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/src/index.ts</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/src/index.ts</summary>
 
 </details>
 </tool-use>
@@ -65,21 +65,21 @@ Let me gather context first.</details></think>
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/src/utils/agents-md.ts</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/src/utils/agents-md.ts</summary>
 
 </details>
 </tool-use>
 
 ---
 
-## Proposed AGENTS.md for Superagents Repo
+## Proposed AGENTS.md for Better Agents Repo
 
-```markdown:/Users/hope/workspace/langwatch/superagents/AGENTS.md
-# Superagents Repository - LLM Development Guidelines
+```markdown:/Users/hope/workspace/langwatch/better-agents/AGENTS.md
+# Better Agents Repository - LLM Development Guidelines
 
 ## Repository Purpose
 
-This is the **Superagents CLI** — a TypeScript tool that scaffolds production-ready AI agent projects with LangWatch best practices baked in.
+This is the **Better Agents CLI** — a TypeScript tool that scaffolds production-ready AI agent projects with LangWatch best practices baked in.
 
 ## Your Role
 
@@ -179,8 +179,8 @@ src/
 ```
 
 ============================
-**Confidence:** 9/10  
-**Reasoning/Concerns:** Based on existing `agents-md.ts` and project docs. Tailored to this repo (CLI tool), not user projects. Covers architecture, common tasks, modular approach.  
+**Confidence:** 9/10
+**Reasoning/Concerns:** Based on existing `agents-md.ts` and project docs. Tailored to this repo (CLI tool), not user projects. Covers architecture, common tasks, modular approach.
 **Follow up suggestions:** Review for tone/completeness; add if new frameworks/commands planned.
 
 ---

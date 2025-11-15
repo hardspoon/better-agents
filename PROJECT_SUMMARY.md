@@ -1,8 +1,8 @@
-# Superagents Project Summary
+# Better Agents Project Summary
 
 ## Overview
 
-Superagents is a TypeScript CLI tool that helps developers kickstart production-ready AI agent projects with LangWatch best practices baked in.
+Better Agents is a TypeScript CLI tool that helps developers kickstart production-ready AI agent projects with LangWatch best practices baked in.
 
 ## What Was Built
 
@@ -118,7 +118,7 @@ project/
 ## Project Structure
 
 ```
-superagents/
+better-agents/
 ├── src/
 │   ├── index.ts                    # CLI entry point
 │   ├── types.ts                    # Type definitions
@@ -146,7 +146,7 @@ superagents/
 
 ## Usage Flow
 
-1. User runs: `superagents init my-agent`
+1. User runs: `better-agents init my-agent`
 2. CLI prompts for:
    - Language (Python/TypeScript)
    - Framework (Agno/Mastra)
@@ -170,7 +170,7 @@ superagents/
 
 ## Philosophy
 
-Superagents promotes building **production-ready agents** by:
+Better Agents promotes building **production-ready agents** by:
 
 1. **Standard Structure** - Consistent project organization
 2. **Testing First** - Agent Testing Pyramid methodology
@@ -192,7 +192,7 @@ Potential additions:
 
 ## Links
 
-- **Repository**: https://github.com/langwatch/superagents
+- **Repository**: https://github.com/langwatch/better-agents
 - **LangWatch**: https://langwatch.ai
 - **Scenario Docs**: https://scenario.langwatch.ai/
 - **Agent Testing Pyramid**: https://scenario.langwatch.ai/best-practices/the-agent-testing-pyramid
@@ -209,7 +209,7 @@ Potential additions:
 ## Next Steps
 
 1. **Testing**: Test CLI with various configurations
-2. **Publishing**: Publish to npm as `@langwatch/superagents`
+2. **Publishing**: Publish to npm as `@langwatch/better-agents`
 3. **Marketing**: Announce on social media, blog posts
 4. **Community**: Gather feedback, iterate on features
 5. **Expansion**: Add more frameworks, languages, assistants

@@ -1,13 +1,13 @@
-# Contributing to Superagents
+# Contributing to Better Agents
 
-Thank you for your interest in contributing to Superagents! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to Better Agents! This document provides guidelines and instructions for contributing.
 
 ## Development Setup
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/langwatch/superagents
-   cd superagents
+   git clone https://github.com/langwatch/better-agents
+   cd better-agents
    ```
 
 2. **Install dependencies**

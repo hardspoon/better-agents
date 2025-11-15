@@ -1,6 +1,5 @@
 import * as fs from "fs/promises";
 import * as path from "path";
-import chalk from "chalk";
 import { collectConfig } from "../config-collection/collect-config.js";
 import { createProjectStructure } from "../project-scaffolding/create-project-structure.js";
 import { getFrameworkProvider } from "../providers/frameworks/index.js";

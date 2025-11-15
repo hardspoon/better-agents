@@ -35,7 +35,7 @@ export class BaseLogger {
    */
   private async setupProjectLogging(projectPath: string): Promise<void> {
     try {
-      const logDir = path.join(projectPath, ".superagents");
+      const logDir = path.join(projectPath, ".better-agents");
 
       // Create timestamped log file name: debug-YYYY-MM-DD-HH-MM-SS.log
       const now = new Date();

@@ -27,7 +27,7 @@ export const buildInitialPrompt = ({
   const frameworkKnowledge = frameworkProvider.getKnowledge();
   const languageKnowledge = languageProvider.getKnowledge();
 
-  const instructions = `You are an expert AI agent developer. This project has been set up with Superagents best practices.
+  const instructions = `You are an expert AI agent developer. This project has been set up with Better Agents best practices.
 
 First steps:
 1. Read and understand the AGENTS.md file - it contains all the guidelines for this project

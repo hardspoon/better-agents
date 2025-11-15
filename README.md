@@ -1,8 +1,8 @@
 ![](/images/cover-image.png)
 
-# Superagents
+# Better Agents
 
-Superagents is a CLI tool and a set of standards for agent building.
+Better Agents is a CLI tool and a set of standards for agent building.
 
 It supercharges your coding assistant (Claude Code, Cursor, Kilocode, etc), making it an expert in any agent framework you choose (Agno, Mastra, etc) and all their best practices, being able to autodiscover MCP tools to augment your agent.
 
@@ -11,13 +11,13 @@ The Superagent Structure ensures industry best practices, making your agent read
 ## Installation
 
 ```bash
-npm install -g @langwatch/superagents
+npm install -g @langwatch/better-agents
 ```
 
 Or use with npx:
 
 ```bash
-npx @langwatch/superagents init my-agent-project
+npx @langwatch/better-agents init my-agent-project
 ```
 
 ## Documentation
@@ -28,7 +28,7 @@ npx @langwatch/superagents init my-agent-project
 - **[Features](docs/FEATURES.md)** - Key features and capabilities
 - **[Usage](docs/USAGE.md)** - CLI usage and examples
 - **[Philosophy](docs/PHILOSOPHY.md)** - Agent Testing Pyramid approach
-- **[Contributing](docs/CONTRIBUTING.md)** - How to contribute to Superagents
+- **[Contributing](docs/CONTRIBUTING.md)** - How to contribute to Better Agents
 - **[Changelog](CHANGELOG.md)** - Version history
 
 ## Usage
@@ -37,10 +37,10 @@ npx @langwatch/superagents init my-agent-project
 
 ```bash
 # In current directory
-superagents init .
+better-agents init .
 
 # In a new directory
-superagents init my-awesome-agent
+better-agents init my-awesome-agent
 ```
 
 The CLI will guide you through selecting your programming language, agent framework, coding assistant, LLM provider, and API keys.

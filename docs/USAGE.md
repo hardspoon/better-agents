@@ -4,10 +4,10 @@
 
 ```bash
 # In current directory
-superagents init .
+better-agents init .
 
 # In a new directory
-superagents init my-awesome-agent
+better-agents init my-awesome-agent
 ```
 
 The CLI will guide you through:
@@ -24,7 +24,7 @@ The CLI will guide you through:
 ### Python + Agno
 
 ```bash
-superagents init trading-agent
+better-agents init trading-agent
 # Select: Python, Agno, your preferred coding assistant, OpenAI
 # Goal: "Build an agent that can analyze stock prices and provide trading recommendations"
 ```
@@ -32,14 +32,14 @@ superagents init trading-agent
 ### TypeScript + Mastra
 
 ```bash
-superagents init customer-support
+better-agents init customer-support
 # Select: TypeScript, Mastra, your preferred coding assistant, OpenAI
 # Goal: "Build a customer support agent that can handle common queries and escalate complex issues"
 ```
 
 ### Coding Assistant Auto-Launch
 
-After project setup completes, Superagents **automatically launches** your chosen coding assistant with a customized initial prompt that includes:
+After project setup completes, Better Agents **automatically launches** your chosen coding assistant with a customized initial prompt that includes:
 - Your project goal
 - Framework-specific context
 - Best practices guidance
@@ -53,8 +53,8 @@ You can also select **"None - I will prompt it myself"** if you prefer to manual
 
 ```bash
 # Clone the repo
-git clone https://github.com/langwatch/superagents
-cd superagents
+git clone https://github.com/langwatch/better-agents
+cd better-agents
 
 # Install dependencies
 pnpm install

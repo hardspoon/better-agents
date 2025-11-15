@@ -1,23 +1,23 @@
 # Quick Start Guide
 
-Get started with Superagents in 2 minutes! 🚀
+Get started with Better Agents in 2 minutes! 🚀
 
 ## Installation
 
 ```bash
-npm install -g @langwatch/superagents
+npm install -g @langwatch/better-agents
 ```
 
 Or use npx (no installation):
 
 ```bash
-npx @langwatch/superagents init my-agent
+npx @langwatch/better-agents init my-agent
 ```
 
 ## Usage
 
 ```bash
-superagents init my-agent
+better-agents init my-agent
 ```
 
 Follow the prompts:
@@ -71,5 +71,5 @@ Your coding assistant is now an expert in:
 
 ---
 
-Questions? Open an issue on [GitHub](https://github.com/langwatch/superagents)!
+Questions? Open an issue on [GitHub](https://github.com/langwatch/better-agents)!
 

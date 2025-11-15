@@ -4,7 +4,7 @@ import { initCommand } from './commands/init';
 const program = new Command();
 
 program
-  .name('superagents')
+  .name('better-agents')
   .description('CLI for kicking off production-ready agent projects with LangWatch best practices')
   .version('0.1.0')
   .option('-d, --debug', 'Enable debug logging with structured JSON output');

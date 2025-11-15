@@ -1,6 +1,6 @@
 # E2E Test Utilities
 
-Utilities for end-to-end testing of the superagents CLI.
+Utilities for end-to-end testing of the better-agents CLI.
 
 ## CLITestRunner
 
@@ -13,7 +13,7 @@ import { CLITestRunner } from "./utils/cli-test-runner.js";
 
 it("creates a project", async () => {
   const runner = new CLITestRunner();
-  
+
   await runner
     .command('init', 'my-project')
     .expectPrompt('What programming language')
@@ -24,7 +24,7 @@ it("creates a project", async () => {
     .expectFile('src/main.ts')
     .expectFileToMatchInlineSnapshot('package.json')
     .run();
-    
+
   await runner.cleanup();
 });
 ```

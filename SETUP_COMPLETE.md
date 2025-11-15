@@ -1,6 +1,6 @@
-# ✅ Superagents Setup Complete!
+# ✅ Better Agents Setup Complete!
 
-The Superagents CLI is fully built and ready to use! 🚀
+The Better Agents CLI is fully built and ready to use! 🚀
 
 ## What's Been Built
 
@@ -42,7 +42,7 @@ The Superagents CLI is fully built and ready to use! 🚀
 ## File Structure
 
 ```
-superagents/
+better-agents/
 ├── 📄 Documentation
 │   ├── README.md
 │   ├── QUICKSTART.md
@@ -82,7 +82,7 @@ superagents/
 Try it out:
 
 ```bash
-cd /Users/rchaves/Projects/superagents
+cd /Users/rchaves/Projects/better-agents
 
 # Test help
 node dist/index.js --help
@@ -112,17 +112,17 @@ Users can install and use:
 
 ```bash
 # Install globally
-npm install -g @langwatch/superagents
+npm install -g @langwatch/better-agents
 
 # Or use with npx
-npx @langwatch/superagents init my-agent
+npx @langwatch/better-agents init my-agent
 
 # Follow prompts to create project
 ```
 
 ## What Users Get
 
-When users run `superagents init my-project`:
+When users run `better-agents init my-project`:
 
 1. **Interactive Setup**
    - Choose language, framework, tools
@@ -212,7 +212,7 @@ Track:
 
 ## Support
 
-- **Issues**: https://github.com/langwatch/superagents/issues
+- **Issues**: https://github.com/langwatch/better-agents/issues
 - **Email**: support@langwatch.ai
 - **Docs**: See all markdown files
 
@@ -220,7 +220,7 @@ Track:
 
 ## 🎉 Congratulations!
 
-Superagents is complete and ready to help developers build production-ready AI agents!
+Better Agents is complete and ready to help developers build production-ready AI agents!
 
 **Built with ❤️ by the LangWatch team**
 **Date: November 7, 2025**

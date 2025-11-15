@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Superagents will be documented in this file.
+All notable changes to Better Agents will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -8,8 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] - 2025-11-07
 
 ### Added
-- Initial release of Superagents CLI
-- Interactive project initialization with `superagents init`
+- Initial release of Better Agents CLI
+- Interactive project initialization with `better-agents init`
 - Support for Python and TypeScript projects
 - Integration with Agno framework (Python)
 - Integration with Mastra framework (TypeScript)
@@ -43,5 +43,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - MIT License
 - Example project structures
 
-[0.1.0]: https://github.com/langwatch/superagents/releases/tag/v0.1.0
+[0.1.0]: https://github.com/langwatch/better-agents/releases/tag/v0.1.0
 

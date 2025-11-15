@@ -30,7 +30,7 @@ Your coding assistant (e.g., Claude Code, Cursor, Kilocode CLI) is:
 
 ## 📊 Agent Testing Pyramid
 
-Superagents enforces a comprehensive testing methodology:
+Better Agents enforces a comprehensive testing methodology:
 
 1. **Unit Tests** - Test deterministic components
 2. **Evaluations** - Measure and optimize probabilistic components using Jupyter notebooks

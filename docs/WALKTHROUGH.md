@@ -1,6 +1,6 @@
-# Superagents Walkthrough
+# Better Agents Walkthrough
 
-This guide walks you through creating your first agent project with Superagents.
+This guide walks you through creating your first agent project with Better Agents.
 
 ## Prerequisites
 
@@ -9,16 +9,16 @@ This guide walks you through creating your first agent project with Superagents.
 - A LangWatch API key (get one at https://app.langwatch.ai/authorize)
 - Claude Code installed (optional, for coding assistant integration)
 
-## Step 1: Install Superagents
+## Step 1: Install Better Agents
 
 ```bash
-npm install -g @langwatch/superagents
+npm install -g @langwatch/better-agents
 ```
 
 Or use with npx (no installation needed):
 
 ```bash
-npx @langwatch/superagents init my-stock-agent
+npx @langwatch/better-agents init my-stock-agent
 ```
 
 ## Step 2: Initialize Your Project
@@ -26,7 +26,7 @@ npx @langwatch/superagents init my-stock-agent
 Let's create a stock analysis agent:
 
 ```bash
-superagents init my-stock-agent
+better-agents init my-stock-agent
 ```
 
 You'll be prompted with:

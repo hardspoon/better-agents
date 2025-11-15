@@ -38,7 +38,7 @@ I'll analyze the repo against the coding guidelines and identify refactoring opp
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/.cursor/rules/coding-guidelines.mdc</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/.cursor/rules/coding-guidelines.mdc</summary>
 
 </details>
 </tool-use>
@@ -46,7 +46,7 @@ I'll analyze the repo against the coding guidelines and identify refactoring opp
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/src/index.ts</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/src/index.ts</summary>
 
 </details>
 </tool-use>
@@ -54,7 +54,7 @@ I'll analyze the repo against the coding guidelines and identify refactoring opp
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/src/commands/init.ts</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/src/commands/init.ts</summary>
 
 </details>
 </tool-use>
@@ -62,7 +62,7 @@ I'll analyze the repo against the coding guidelines and identify refactoring opp
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/src/prompts.ts</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/src/prompts.ts</summary>
 
 </details>
 </tool-use>
@@ -70,7 +70,7 @@ I'll analyze the repo against the coding guidelines and identify refactoring opp
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/src/types.ts</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/src/types.ts</summary>
 
 </details>
 </tool-use>
@@ -78,7 +78,7 @@ I'll analyze the repo against the coding guidelines and identify refactoring opp
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/src/utils/project-structure.ts</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/src/utils/project-structure.ts</summary>
 
 </details>
 </tool-use>
@@ -86,7 +86,7 @@ I'll analyze the repo against the coding guidelines and identify refactoring opp
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/src/utils/mcp-config.ts</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/src/utils/mcp-config.ts</summary>
 
 </details>
 </tool-use>
@@ -94,7 +94,7 @@ I'll analyze the repo against the coding guidelines and identify refactoring opp
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/src/utils/agents-md.ts</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/src/utils/agents-md.ts</summary>
 
 </details>
 </tool-use>
@@ -102,7 +102,7 @@ I'll analyze the repo against the coding guidelines and identify refactoring opp
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/src/utils/agno-config.ts</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/src/utils/agno-config.ts</summary>
 
 </details>
 </tool-use>
@@ -110,7 +110,7 @@ I'll analyze the repo against the coding guidelines and identify refactoring opp
 ---
 
 <tool-use data-tool-type="read" data-tool-name="read_file">
-<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/superagents/src/utils/kickoff-agent.ts</summary>
+<details><summary>Tool use: **read_file** • Read file: /Users/hope/workspace/langwatch/better-agents/src/utils/kickoff-agent.ts</summary>
 
 </details>
 </tool-use>
@@ -187,7 +187,7 @@ agents-md/
 | `kickoff-agent.ts` | 49 | Missing TSDoc | Low |
 
 ============================
-**Confidence: 9/10**  
+**Confidence: 9/10**
 **Reasoning:** Clear violations of SRP and "thin files" principle. Large template files should be modularized. TSDoc missing across all files.
 
 **Follow-up suggestions:**
@@ -234,7 +234,7 @@ Current structure groups by technical type (`utils/`). Here's a clearer domain-d
 src/
   commands/
     init.ts                          (orchestrator only)
-  
+
   config-collection/                 (was prompts.ts)
     collect-config.ts
     validators/
@@ -244,7 +244,7 @@ src/
     choice-builders/
       language-choices.ts
       framework-choices.ts
-  
+
   project-scaffolding/               (was project-structure.ts)
     create-directory-structure.ts
     file-generators/
@@ -254,7 +254,7 @@ src/
       sample-prompt-file.ts
       sample-evaluation.ts
       sample-scenario-test.ts
-  
+
   documentation/                     (was agents-md.ts)
     generate-agents-guide.ts
     sections/
@@ -262,14 +262,14 @@ src/
       testing-pyramid-section.ts
       framework-guidelines-section.ts
       workflow-section.ts
-  
+
   tool-setup/                        (was mcp-config.ts, agno-config.ts)
     mcp/
       setup-mcp-servers.ts
     agno/
       fetch-agno-rules.ts
       fetch-agno-docs.ts
-  
+
   assistant-kickoff/                 (was kickoff-agent.ts)
     build-initial-prompt.ts
     display-instructions.ts
@@ -277,7 +277,7 @@ src/
 
 **Naming Rationale:**
 - `config-collection` = gathering user choices
-- `project-scaffolding` = building folder/file structure  
+- `project-scaffolding` = building folder/file structure
 - `documentation` = generating guide files
 - `tool-setup` = external tool configuration
 - `assistant-kickoff` = starting the AI assistant
@@ -285,7 +285,7 @@ src/
 Each folder name describes **what it accomplishes**, not the technical mechanism.
 
 ============================
-**Confidence: 9/10**  
+**Confidence: 9/10**
 **Reasoning:** Feature-based > technical grouping. Names now describe business intent.
 
 **Follow-up:** Want me to detail what functions go in each new file?
@@ -316,22 +316,22 @@ src/
     collect-config.ts
     validators/
     choice-builders/
-  
+
   project-scaffolding/
     README.md
     create-directory-structure.ts
     file-generators/
-  
+
   documentation/
     README.md
     generate-agents-guide.ts
     sections/
-  
+
   tool-setup/
     README.md
     mcp/
     agno/
-  
+
   assistant-kickoff/
     README.md
     build-initial-prompt.ts
@@ -378,7 +378,7 @@ Creates the physical directory structure and starter files for new agent project
 - Living documentation: stays in sync with code
 
 ============================
-**Confidence: 10/10**  
+**Confidence: 10/10**
 **Reasoning:** READMEs for feature modules are a best practice that aligns with Clean Code and documentation principles.
 
 **Follow-up:** Want templates for all directory READMEs?
@@ -387,7 +387,7 @@ Creates the physical directory structure and starter files for new agent project
 
 _**User (2025-11-07 11:18Z)**_
 
-do the refactor, consider @unit-tests-todos.mdc 
+do the refactor, consider @unit-tests-todos.mdc
 
 ---
 
@@ -433,35 +433,35 @@ I need to be atomic and methodical. Let me create a TODO list first.</details></
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/config-collection/README.md</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/config-collection/README.md</summary>
 
 **Chunk 1**
 Lines added: 21, lines removed: 1
 
 ```diff
 @@ -1,1 +1,21 @@
-- 
+-
 + # Config Collection
-+ 
++
 + Gathers user input for project initialization via interactive prompts.
-+ 
++
 + ## Responsibilities
 + - Collect language/framework choices
 + - Validate API keys (OpenAI, LangWatch)
 + - Capture project goals
-+ 
++
 + ## Main Export
 + - &#96;collectConfig()&#96; → &#96;ProjectConfig&#96;
-+ 
++
 + ## Structure
 + - &#96;collect-config.ts&#96; - Main orchestrator
 + - &#96;validators/&#96; - API key and input validation logic
 + - &#96;choice-builders/&#96; - Dynamic choice generation for prompts
-+ 
++
 + ## Dependencies
 + - &#96;@inquirer/prompts&#96; - Interactive CLI prompts
 + - &#96;../types&#96; - ProjectConfig type definitions
-+ 
++
 ```
 
 </details>
@@ -472,20 +472,20 @@ Lines added: 21, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/config-collection/validators/openai-key.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/config-collection/validators/openai-key.ts</summary>
 
 **Chunk 1**
 Lines added: 22, lines removed: 1
 
 ```diff
 @@ -1,1 +1,22 @@
-- 
+-
 + /**
 +  * Validates OpenAI API key format.
-+  * 
++  *
 +  * @param value - The API key to validate
 +  * @returns true if valid, error message if invalid
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * const result = validateOpenAIKey(&#39;sk-abc123&#39;);
@@ -501,7 +501,7 @@ Lines added: 22, lines removed: 1
 +   }
 +   return true;
 + };
-+ 
++
 ```
 
 </details>
@@ -512,20 +512,20 @@ Lines added: 22, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/config-collection/validators/langwatch-key.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/config-collection/validators/langwatch-key.ts</summary>
 
 **Chunk 1**
 Lines added: 22, lines removed: 1
 
 ```diff
 @@ -1,1 +1,22 @@
-- 
+-
 + /**
 +  * Validates LangWatch API key format.
-+  * 
++  *
 +  * @param value - The API key to validate
 +  * @returns true if valid, error message if invalid
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * const result = validateLangWatchKey(&#39;sk-lw-abc123&#39;);
@@ -541,7 +541,7 @@ Lines added: 22, lines removed: 1
 +   }
 +   return true;
 + };
-+ 
++
 ```
 
 </details>
@@ -552,20 +552,20 @@ Lines added: 22, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/config-collection/validators/project-goal.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/config-collection/validators/project-goal.ts</summary>
 
 **Chunk 1**
 Lines added: 19, lines removed: 1
 
 ```diff
 @@ -1,1 +1,19 @@
-- 
+-
 + /**
 +  * Validates project goal input.
-+  * 
++  *
 +  * @param value - The project goal to validate
 +  * @returns true if valid, error message if invalid
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * const result = validateProjectGoal(&#39;Build a chatbot&#39;);
@@ -578,7 +578,7 @@ Lines added: 19, lines removed: 1
 +   }
 +   return true;
 + };
-+ 
++
 ```
 
 </details>
@@ -589,21 +589,21 @@ Lines added: 19, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/config-collection/choice-builders/language-choices.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/config-collection/choice-builders/language-choices.ts</summary>
 
 **Chunk 1**
 Lines added: 20, lines removed: 1
 
 ```diff
 @@ -1,1 +1,20 @@
-- 
+-
 + import type { ProgrammingLanguage } from &#39;../../types.js&#39;;
-+ 
++
 + /**
 +  * Builds the list of programming language choices for the CLI prompt.
-+  * 
++  *
 +  * @returns Array of language choices
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * const choices = buildLanguageChoices();
@@ -616,7 +616,7 @@ Lines added: 20, lines removed: 1
 +     { name: &#39;TypeScript&#39;, value: &#39;typescript&#39; as ProgrammingLanguage },
 +   ];
 + };
-+ 
++
 ```
 
 </details>
@@ -627,23 +627,23 @@ Lines added: 20, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/config-collection/choice-builders/framework-choices.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/config-collection/choice-builders/framework-choices.ts</summary>
 
 **Chunk 1**
 Lines added: 21, lines removed: 1
 
 ```diff
 @@ -1,1 +1,21 @@
-- 
+-
 + import type { AgentFramework, ProgrammingLanguage } from &#39;../../types.js&#39;;
-+ 
++
 + /**
 +  * Builds framework choices based on the selected programming language.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.language - The selected programming language
 +  * @returns Array of framework choices for the language
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * const choices = buildFrameworkChoices({ language: &#39;python&#39; });
@@ -655,7 +655,7 @@ Lines added: 21, lines removed: 1
 +     ? [{ name: &#39;Agno&#39;, value: &#39;agno&#39; as AgentFramework }]
 +     : [{ name: &#39;Mastra&#39;, value: &#39;mastra&#39; as AgentFramework }];
 + };
-+ 
++
 ```
 
 </details>
@@ -666,14 +666,14 @@ Lines added: 21, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/config-collection/collect-config.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/config-collection/collect-config.ts</summary>
 
 **Chunk 1**
 Lines added: 79, lines removed: 1
 
 ```diff
 @@ -1,1 +1,79 @@
-- 
+-
 + import { select, input, password } from &#39;@inquirer/prompts&#39;;
 + import chalk from &#39;chalk&#39;;
 + import type { ProjectConfig, CodingAssistant, LLMProvider } from &#39;../types.js&#39;;
@@ -682,12 +682,12 @@ Lines added: 79, lines removed: 1
 + import { validateOpenAIKey } from &#39;./validators/openai-key.js&#39;;
 + import { validateLangWatchKey } from &#39;./validators/langwatch-key.js&#39;;
 + import { validateProjectGoal } from &#39;./validators/project-goal.js&#39;;
-+ 
++
 + /**
 +  * Collects project configuration from user via interactive CLI prompts.
-+  * 
++  *
 +  * @returns Promise resolving to complete ProjectConfig
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * const config = await collectConfig();
@@ -695,53 +695,53 @@ Lines added: 79, lines removed: 1
 +  * &#96;&#96;&#96;
 +  */
 + export const collectConfig = async (): Promise&lt;ProjectConfig&gt; =&gt; {
-+   console.log(chalk.bold.cyan(&#39;\n🚀 Welcome to Superagents by LangWatch!\n&#39;));
++   console.log(chalk.bold.cyan(&#39;\n🚀 Welcome to Better Agents by LangWatch!\n&#39;));
 +   console.log(chalk.gray(&#39;Let\&#39;s set up your production-ready agent project.\n&#39;));
-+ 
++
 +   const language = await select({
 +     message: &#39;What programming language do you want to use?&#39;,
 +     choices: buildLanguageChoices(),
 +   });
-+ 
++
 +   const framework = await select({
 +     message: &#39;What agent framework do you want to use?&#39;,
 +     choices: buildFrameworkChoices({ language }),
 +   });
-+ 
++
 +   const codingAssistant = await select&lt;CodingAssistant&gt;({
 +     message: &#39;What coding assistant do you want to use?&#39;,
 +     choices: [
 +       { name: &#39;Claude Code&#39;, value: &#39;claude-code&#39; },
 +     ],
 +   });
-+ 
++
 +   const llmProvider = await select&lt;LLMProvider&gt;({
 +     message: &#39;What LLM provider do you want to use?&#39;,
 +     choices: [
 +       { name: &#39;OpenAI&#39;, value: &#39;openai&#39; },
 +     ],
 +   });
-+ 
++
 +   const openaiApiKey = await password({
 +     message: &#39;Enter your OpenAI API key:&#39;,
 +     mask: &#39;*&#39;,
 +     validate: validateOpenAIKey,
 +   });
-+ 
++
 +   console.log(chalk.gray(&#39;\nTo get your LangWatch API key, visit:&#39;));
 +   console.log(chalk.blue.underline(&#39;https://app.langwatch.ai/authorize\n&#39;));
-+ 
++
 +   const langwatchApiKey = await password({
 +     message: &#39;Enter your LangWatch API key:&#39;,
 +     mask: &#39;*&#39;,
 +     validate: validateLangWatchKey,
 +   });
-+ 
++
 +   const projectGoal = await input({
 +     message: &#39;What do you want to build?&#39;,
 +     validate: validateProjectGoal,
 +   });
-+ 
++
 +   return {
 +     language,
 +     framework,
@@ -752,7 +752,7 @@ Lines added: 79, lines removed: 1
 +     projectGoal,
 +   };
 + };
-+ 
++
 ```
 
 </details>
@@ -763,54 +763,54 @@ Lines added: 79, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/config-collection/__tests__/validators.test.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/config-collection/__tests__/validators.test.ts</summary>
 
 **Chunk 1**
 Lines added: 40, lines removed: 1
 
 ```diff
 @@ -1,1 +1,40 @@
-- 
+-
 + import { describe, it } from &#39;vitest&#39;;
-+ 
++
 + describe(&#39;validateOpenAIKey&#39;, () =&gt; {
 +   describe(&#39;when value is empty&#39;, () =&gt; {
 +     it.todo(&#39;returns error message&#39;);
 +   });
-+ 
++
 +   describe(&#39;when value does not start with sk-&#39;, () =&gt; {
 +     it.todo(&#39;returns error message&#39;);
 +   });
-+ 
++
 +   describe(&#39;when value is valid&#39;, () =&gt; {
 +     it.todo(&#39;returns true&#39;);
 +   });
 + });
-+ 
++
 + describe(&#39;validateLangWatchKey&#39;, () =&gt; {
 +   describe(&#39;when value is empty&#39;, () =&gt; {
 +     it.todo(&#39;returns error message&#39;);
 +   });
-+ 
++
 +   describe(&#39;when value does not start with sk-lw-&#39;, () =&gt; {
 +     it.todo(&#39;returns error message&#39;);
 +   });
-+ 
++
 +   describe(&#39;when value is valid&#39;, () =&gt; {
 +     it.todo(&#39;returns true&#39;);
 +   });
 + });
-+ 
++
 + describe(&#39;validateProjectGoal&#39;, () =&gt; {
 +   describe(&#39;when value is empty&#39;, () =&gt; {
 +     it.todo(&#39;returns error message&#39;);
 +   });
-+ 
++
 +   describe(&#39;when value is valid&#39;, () =&gt; {
 +     it.todo(&#39;returns true&#39;);
 +   });
 + });
-+ 
++
 ```
 
 </details>
@@ -821,26 +821,26 @@ Lines added: 40, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/config-collection/__tests__/choice-builders.test.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/config-collection/__tests__/choice-builders.test.ts</summary>
 
 **Chunk 1**
 Lines added: 12, lines removed: 1
 
 ```diff
 @@ -1,1 +1,12 @@
-- 
+-
 + import { describe, it } from &#39;vitest&#39;;
-+ 
++
 + describe(&#39;buildFrameworkChoices&#39;, () =&gt; {
 +   describe(&#39;when language is python&#39;, () =&gt; {
 +     it.todo(&#39;returns Agno choice&#39;);
 +   });
-+ 
++
 +   describe(&#39;when language is typescript&#39;, () =&gt; {
 +     it.todo(&#39;returns Mastra choice&#39;);
 +   });
 + });
-+ 
++
 ```
 
 </details>
@@ -868,34 +868,34 @@ Lines added: 12, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/project-scaffolding/README.md</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/project-scaffolding/README.md</summary>
 
 **Chunk 1**
 Lines added: 20, lines removed: 1
 
 ```diff
 @@ -1,1 +1,20 @@
-- 
+-
 + # Project Scaffolding
-+ 
++
 + Creates the physical directory structure and starter files for new agent projects.
-+ 
++
 + ## Responsibilities
 + - Create folder hierarchy (src/, tests/, prompts/)
 + - Generate template files (.env, .gitignore, main entry)
 + - Write sample tests and evaluations
-+ 
++
 + ## Main Export
 + - &#96;createProjectStructure(projectPath, config)&#96; → &#96;Promise&lt;void&gt;&#96;
-+ 
++
 + ## Structure
 + - &#96;create-directory-structure.ts&#96; - Directory creation logic
 + - &#96;file-generators/&#96; - Individual file template generators
-+ 
++
 + ## Dependencies
 + - &#96;fs/promises&#96; - File system operations
 + - &#96;../types&#96; - ProjectConfig type definitions
-+ 
++
 ```
 
 </details>
@@ -906,26 +906,26 @@ Lines added: 20, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/project-scaffolding/create-directory-structure.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/project-scaffolding/create-directory-structure.ts</summary>
 
 **Chunk 1**
 Lines added: 33, lines removed: 1
 
 ```diff
 @@ -1,1 +1,33 @@
-- 
+-
 + import * as fs from &#39;fs/promises&#39;;
 + import * as path from &#39;path&#39;;
 + import type { ProjectConfig } from &#39;../types.js&#39;;
-+ 
++
 + /**
 +  * Creates the directory structure for a new agent project.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @param params.config - Project configuration
 +  * @returns Promise that resolves when directories are created
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await createDirectories({ projectPath: &#39;/path/to/project&#39;, config });
@@ -933,7 +933,7 @@ Lines added: 33, lines removed: 1
 +  */
 + export const createDirectories = async ({ projectPath, config }: { projectPath: string; config: ProjectConfig }): Promise&lt;void&gt; =&gt; {
 +   const srcDir = config.framework === &#39;mastra&#39; ? &#39;src&#39; : &#39;app&#39;;
-+ 
++
 +   const directories = [
 +     srcDir,
 +     &#39;prompts&#39;,
@@ -941,12 +941,12 @@ Lines added: 33, lines removed: 1
 +     &#39;tests/evaluations&#39;,
 +     &#39;tests/scenarios&#39;,
 +   ];
-+ 
++
 +   for (const dir of directories) {
 +     await fs.mkdir(path.join(projectPath, dir), { recursive: true });
 +   }
 + };
-+ 
++
 ```
 
 </details>
@@ -957,65 +957,65 @@ Lines added: 33, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/project-scaffolding/file-generators/env-files.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/project-scaffolding/file-generators/env-files.ts</summary>
 
 **Chunk 1**
 Lines added: 51, lines removed: 1
 
 ```diff
 @@ -1,1 +1,51 @@
-- 
+-
 + import * as fs from &#39;fs/promises&#39;;
 + import * as path from &#39;path&#39;;
-+ 
++
 + /**
 +  * Generates .env.example and .env files with API key placeholders.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @param params.openaiApiKey - OpenAI API key to include in .env
 +  * @param params.langwatchApiKey - LangWatch API key to include in .env
 +  * @returns Promise that resolves when files are written
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await generateEnvFiles({ projectPath: &#39;/path&#39;, openaiApiKey: &#39;sk-...&#39;, langwatchApiKey: &#39;sk-lw-...&#39; });
 +  * &#96;&#96;&#96;
 +  */
-+ export const generateEnvFiles = async ({ 
-+   projectPath, 
-+   openaiApiKey, 
-+   langwatchApiKey 
-+ }: { 
-+   projectPath: string; 
-+   openaiApiKey: string; 
-+   langwatchApiKey: string; 
++ export const generateEnvFiles = async ({
++   projectPath,
++   openaiApiKey,
++   langwatchApiKey
++ }: {
++   projectPath: string;
++   openaiApiKey: string;
++   langwatchApiKey: string;
 + }): Promise&lt;void&gt; =&gt; {
 +   const envExample = &#96;# LLM Provider API Keys
 + OPENAI_API_KEY=your_openai_api_key_here
-+ 
++
 + # LangWatch
 + LANGWATCH_API_KEY=your_langwatch_api_key_here
 + &#96;;
-+ 
++
 +   await fs.writeFile(
 +     path.join(projectPath, &#39;.env.example&#39;),
 +     envExample
 +   );
-+ 
++
 +   const envContent = &#96;# LLM Provider API Keys
 + OPENAI_API_KEY=${openaiApiKey}
-+ 
++
 + # LangWatch
 + LANGWATCH_API_KEY=${langwatchApiKey}
 + &#96;;
-+ 
++
 +   await fs.writeFile(
 +     path.join(projectPath, &#39;.env&#39;),
 +     envContent
 +   );
 + };
-+ 
++
 ```
 
 </details>
@@ -1026,24 +1026,24 @@ Lines added: 51, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/project-scaffolding/file-generators/gitignore-generator.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/project-scaffolding/file-generators/gitignore-generator.ts</summary>
 
 **Chunk 1**
 Lines added: 48, lines removed: 1
 
 ```diff
 @@ -1,1 +1,48 @@
-- 
+-
 + import * as fs from &#39;fs/promises&#39;;
 + import * as path from &#39;path&#39;;
-+ 
++
 + /**
 +  * Generates .gitignore file with common patterns for agent projects.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @returns Promise that resolves when file is written
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await generateGitignore({ projectPath: &#39;/path/to/project&#39; });
@@ -1052,36 +1052,36 @@ Lines added: 48, lines removed: 1
 + export const generateGitignore = async ({ projectPath }: { projectPath: string }): Promise&lt;void&gt; =&gt; {
 +   const gitignoreContent = &#96;# Environment variables
 + .env
-+ 
++
 + # Dependencies
 + node_modules/
 + __pycache__/
 + *.pyc
 + venv/
 + .venv/
-+ 
++
 + # IDE
 + .vscode/
 + .idea/
 + *.swp
 + *.swo
-+ 
++
 + # OS
 + .DS_Store
 + Thumbs.db
-+ 
++
 + # Build outputs
 + dist/
 + build/
 + *.egg-info/
 + &#96;;
-+ 
++
 +   await fs.writeFile(
 +     path.join(projectPath, &#39;.gitignore&#39;),
 +     gitignoreContent
 +   );
 + };
-+ 
++
 ```
 
 </details>
@@ -1092,24 +1092,24 @@ Lines added: 48, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/project-scaffolding/file-generators/sample-prompt-file.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/project-scaffolding/file-generators/sample-prompt-file.ts</summary>
 
 **Chunk 1**
 Lines added: 36, lines removed: 1
 
 ```diff
 @@ -1,1 +1,36 @@
-- 
+-
 + import * as fs from &#39;fs/promises&#39;;
 + import * as path from &#39;path&#39;;
-+ 
++
 + /**
 +  * Generates sample prompt YAML file in prompts/ directory.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @returns Promise that resolves when file is written
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await generateSamplePrompt({ projectPath: &#39;/path/to/project&#39; });
@@ -1124,18 +1124,18 @@ Lines added: 36, lines removed: 1
 +     content: |
 +       You are a helpful AI assistant.
 + &#96;;
-+ 
++
 +   await fs.writeFile(
 +     path.join(projectPath, &#39;prompts&#39;, &#39;sample_prompt.yaml&#39;),
 +     samplePromptYaml
 +   );
-+ 
++
 +   await fs.writeFile(
 +     path.join(projectPath, &#39;prompts.json&#39;),
 +     JSON.stringify({ prompts: [] }, null, 2)
 +   );
 + };
-+ 
++
 ```
 
 </details>
@@ -1146,37 +1146,37 @@ Lines added: 36, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/project-scaffolding/file-generators/sample-evaluation.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/project-scaffolding/file-generators/sample-evaluation.ts</summary>
 
 **Chunk 1**
 Lines added: 63, lines removed: 1
 
 ```diff
 @@ -1,1 +1,63 @@
-- 
+-
 + import * as fs from &#39;fs/promises&#39;;
 + import * as path from &#39;path&#39;;
 + import type { ProgrammingLanguage } from &#39;../../types.js&#39;;
-+ 
++
 + /**
 +  * Generates sample evaluation Jupyter notebook in tests/evaluations/.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @param params.language - Programming language (python or typescript)
 +  * @returns Promise that resolves when file is written
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await generateSampleEvaluation({ projectPath: &#39;/path&#39;, language: &#39;python&#39; });
 +  * &#96;&#96;&#96;
 +  */
-+ export const generateSampleEvaluation = async ({ 
-+   projectPath, 
-+   language 
-+ }: { 
-+   projectPath: string; 
-+   language: ProgrammingLanguage; 
++ export const generateSampleEvaluation = async ({
++   projectPath,
++   language
++ }: {
++   projectPath: string;
++   language: ProgrammingLanguage;
 + }): Promise&lt;void&gt; =&gt; {
 +   const sampleEvalNotebook = {
 +     cells: [
@@ -1210,13 +1210,13 @@ Lines added: 63, lines removed: 1
 +     nbformat: 4,
 +     nbformat_minor: 4
 +   };
-+ 
++
 +   await fs.writeFile(
 +     path.join(projectPath, &#39;tests&#39;, &#39;evaluations&#39;, &#39;example_eval.ipynb&#39;),
 +     JSON.stringify(sampleEvalNotebook, null, 2)
 +   );
 + };
-+ 
++
 ```
 
 </details>
@@ -1227,37 +1227,37 @@ Lines added: 63, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/project-scaffolding/file-generators/sample-scenario-test.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/project-scaffolding/file-generators/sample-scenario-test.ts</summary>
 
 **Chunk 1**
 Lines added: 49, lines removed: 1
 
 ```diff
 @@ -1,1 +1,49 @@
-- 
+-
 + import * as fs from &#39;fs/promises&#39;;
 + import * as path from &#39;path&#39;;
 + import type { ProgrammingLanguage } from &#39;../../types.js&#39;;
-+ 
++
 + /**
 +  * Generates sample scenario test file in tests/scenarios/.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @param params.language - Programming language (python or typescript)
 +  * @returns Promise that resolves when file is written
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await generateSampleScenario({ projectPath: &#39;/path&#39;, language: &#39;typescript&#39; });
 +  * &#96;&#96;&#96;
 +  */
-+ export const generateSampleScenario = async ({ 
-+   projectPath, 
-+   language 
-+ }: { 
-+   projectPath: string; 
-+   language: ProgrammingLanguage; 
++ export const generateSampleScenario = async ({
++   projectPath,
++   language
++ }: {
++   projectPath: string;
++   language: ProgrammingLanguage;
 + }): Promise&lt;void&gt; =&gt; {
 +   const ext = language === &#39;python&#39; ? &#39;py&#39; : &#39;ts&#39;;
 +   const sampleScenarioContent = language === &#39;python&#39;
@@ -1265,7 +1265,7 @@ Lines added: 49, lines removed: 1
 + Sample scenario test for your agent.
 + Follow the Agent Testing Pyramid: use Scenario for end-to-end agentic tests.
 + &quot;&quot;&quot;
-+ 
++
 + # TODO: Add your scenario tests here
 + # Refer to https://scenario.langwatch.ai/ for documentation
 + &#96;
@@ -1273,17 +1273,17 @@ Lines added: 49, lines removed: 1
 +  * Sample scenario test for your agent.
 +  * Follow the Agent Testing Pyramid: use Scenario for end-to-end agentic tests.
 +  */
-+ 
++
 + // TODO: Add your scenario tests here
 + // Refer to https://scenario.langwatch.ai/ for documentation
 + &#96;;
-+ 
++
 +   await fs.writeFile(
 +     path.join(projectPath, &#39;tests&#39;, &#39;scenarios&#39;, &#96;example_scenario.test.${ext}&#96;),
 +     sampleScenarioContent
 +   );
 + };
-+ 
++
 ```
 
 </details>
@@ -1294,71 +1294,71 @@ Lines added: 49, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/project-scaffolding/file-generators/main-entry-point.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/project-scaffolding/file-generators/main-entry-point.ts</summary>
 
 **Chunk 1**
 Lines added: 57, lines removed: 1
 
 ```diff
 @@ -1,1 +1,57 @@
-- 
+-
 + import * as fs from &#39;fs/promises&#39;;
 + import * as path from &#39;path&#39;;
 + import type { ProjectConfig } from &#39;../../types.js&#39;;
-+ 
++
 + /**
 +  * Generates main entry point file (main.py or index.ts) in src/app directory.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @param params.config - Project configuration
 +  * @returns Promise that resolves when file is written
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await generateMainEntryPoint({ projectPath: &#39;/path&#39;, config });
 +  * &#96;&#96;&#96;
 +  */
-+ export const generateMainEntryPoint = async ({ 
-+   projectPath, 
-+   config 
-+ }: { 
-+   projectPath: string; 
-+   config: ProjectConfig; 
++ export const generateMainEntryPoint = async ({
++   projectPath,
++   config
++ }: {
++   projectPath: string;
++   config: ProjectConfig;
 + }): Promise&lt;void&gt; =&gt; {
 +   const srcDir = config.framework === &#39;mastra&#39; ? &#39;src&#39; : &#39;app&#39;;
-+   
++
 +   const mainFileContent = config.language === &#39;python&#39;
 +     ? &#96;&quot;&quot;&quot;
 + Main entry point for your agent.
 + &quot;&quot;&quot;
-+ 
++
 + def main():
 +     print(&quot;Welcome to your agent!&quot;)
 +     # TODO: Implement your agent logic here
-+ 
++
 + if __name__ == &quot;__main__&quot;:
 +     main()
 + &#96;
 +     : &#96;/**
 +  * Main entry point for your agent.
 +  */
-+ 
++
 + const main = () =&gt; {
 +   console.log(&quot;Welcome to your agent!&quot;);
 +   // TODO: Implement your agent logic here
 + };
-+ 
++
 + main();
 + &#96;;
-+ 
++
 +   const mainFileName = config.language === &#39;python&#39; ? &#39;main.py&#39; : &#39;index.ts&#39;;
 +   await fs.writeFile(
 +     path.join(projectPath, srcDir, mainFileName),
 +     mainFileContent
 +   );
 + };
-+ 
++
 ```
 
 </details>
@@ -1369,14 +1369,14 @@ Lines added: 57, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/project-scaffolding/create-project-structure.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/project-scaffolding/create-project-structure.ts</summary>
 
 **Chunk 1**
 Lines added: 44, lines removed: 1
 
 ```diff
 @@ -1,1 +1,44 @@
-- 
+-
 + import type { ProjectConfig } from &#39;../types.js&#39;;
 + import { createDirectories } from &#39;./create-directory-structure.js&#39;;
 + import { generateEnvFiles } from &#39;./file-generators/env-files.js&#39;;
@@ -1385,42 +1385,42 @@ Lines added: 44, lines removed: 1
 + import { generateSampleEvaluation } from &#39;./file-generators/sample-evaluation.js&#39;;
 + import { generateSampleScenario } from &#39;./file-generators/sample-scenario-test.js&#39;;
 + import { generateMainEntryPoint } from &#39;./file-generators/main-entry-point.js&#39;;
-+ 
++
 + /**
 +  * Creates complete project structure including directories and starter files.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @param params.config - Project configuration
 +  * @returns Promise that resolves when structure is created
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await createProjectStructure({ projectPath: &#39;/path/to/project&#39;, config });
 +  * &#96;&#96;&#96;
 +  */
-+ export const createProjectStructure = async ({ 
-+   projectPath, 
-+   config 
-+ }: { 
-+   projectPath: string; 
-+   config: ProjectConfig; 
++ export const createProjectStructure = async ({
++   projectPath,
++   config
++ }: {
++   projectPath: string;
++   config: ProjectConfig;
 + }): Promise&lt;void&gt; =&gt; {
 +   await createDirectories({ projectPath, config });
-+   
-+   await generateEnvFiles({ 
-+     projectPath, 
-+     openaiApiKey: config.openaiApiKey, 
-+     langwatchApiKey: config.langwatchApiKey 
++
++   await generateEnvFiles({
++     projectPath,
++     openaiApiKey: config.openaiApiKey,
++     langwatchApiKey: config.langwatchApiKey
 +   });
-+   
++
 +   await generateGitignore({ projectPath });
 +   await generateSamplePrompt({ projectPath });
 +   await generateSampleEvaluation({ projectPath, language: config.language });
 +   await generateSampleScenario({ projectPath, language: config.language });
 +   await generateMainEntryPoint({ projectPath, config });
 + };
-+ 
++
 ```
 
 </details>
@@ -1448,35 +1448,35 @@ Lines added: 44, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/documentation/README.md</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/documentation/README.md</summary>
 
 **Chunk 1**
 Lines added: 21, lines removed: 1
 
 ```diff
 @@ -1,1 +1,21 @@
-- 
+-
 + # Documentation
-+ 
++
 + Generates the AGENTS.md guide file with best practices and guidelines.
-+ 
++
 + ## Responsibilities
 + - Build comprehensive agent development guide
 + - Include testing pyramid methodology
 + - Add framework-specific guidelines
 + - Generate workflow instructions
-+ 
++
 + ## Main Export
 + - &#96;generateAgentsGuide(projectPath, config)&#96; → &#96;Promise&lt;void&gt;&#96;
-+ 
++
 + ## Structure
 + - &#96;generate-agents-guide.ts&#96; - Main orchestrator
 + - &#96;sections/&#96; - Individual section builders for modular content
-+ 
++
 + ## Dependencies
 + - &#96;fs/promises&#96; - File system operations
 + - &#96;../types&#96; - ProjectConfig type definitions
-+ 
++
 ```
 
 </details>
@@ -1487,23 +1487,23 @@ Lines added: 21, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/documentation/sections/overview-section.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/documentation/sections/overview-section.ts</summary>
 
 **Chunk 1**
 Lines added: 32, lines removed: 1
 
 ```diff
 @@ -1,1 +1,32 @@
-- 
+-
 + import type { ProjectConfig } from &#39;../../types.js&#39;;
-+ 
++
 + /**
 +  * Builds the project overview section for AGENTS.md.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.config - Project configuration
 +  * @returns Markdown string for overview section
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * const section = buildOverviewSection({ config });
@@ -1511,22 +1511,22 @@ Lines added: 32, lines removed: 1
 +  */
 + export const buildOverviewSection = ({ config }: { config: ProjectConfig }): string =&gt; {
 +   const { projectGoal, framework, language } = config;
-+ 
++
 +   return &#96;# Agent Development Guidelines
-+ 
++
 + ## Project Overview
-+ 
++
 + **Goal:** ${projectGoal}
-+ 
++
 + **Framework:** ${framework === &#39;agno&#39; ? &#39;Agno&#39; : &#39;Mastra&#39;}
 + **Language:** ${language === &#39;python&#39; ? &#39;Python&#39; : &#39;TypeScript&#39;}
-+ 
++
 + This project follows LangWatch best practices for building production-ready AI agents.
-+ 
++
 + ---
 + &#96;;
 + };
-+ 
++
 ```
 
 </details>
@@ -1537,19 +1537,19 @@ Lines added: 32, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/documentation/sections/principles-section.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/documentation/sections/principles-section.ts</summary>
 
 **Chunk 1**
 Lines added: 67, lines removed: 1
 
 ```diff
 @@ -1,1 +1,67 @@
-- 
+-
 + /**
 +  * Builds the core principles section including testing pyramid for AGENTS.md.
-+  * 
++  *
 +  * @returns Markdown string for core principles section
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * const section = buildPrinciplesSection();
@@ -1557,33 +1557,33 @@ Lines added: 67, lines removed: 1
 +  */
 + export const buildPrinciplesSection = (): string =&gt; {
 +   return &#96;## Core Principles
-+ 
++
 + ### 1. Agent Testing Pyramid
-+ 
++
 + Follow the **Agent Testing Pyramid** methodology (https://scenario.langwatch.ai/best-practices/the-agent-testing-pyramid):
-+ 
++
 + - **Unit Tests (Foundation)**: Test deterministic components (API connections, data transformations, memory storage)
 + - **Evals &amp; Optimization (Middle Layer)**: Evaluate and optimize probabilistic components (RAG retrieval, LLM responses, prompt quality)
 + - **Simulations (Peak)**: End-to-end validation of multi-turn conversations and real-world scenarios
-+ 
++
 + ### 2. Test Every Feature
-+ 
++
 + **CRITICAL**: Every new agent feature MUST be tested with Scenario tests before considering it complete.
-+ 
++
 + - Write simulation tests for multi-turn conversations
 + - Validate edge cases
 + - Ensure business value is delivered
 + - Test different conversation paths
-+ 
++
 + ### 3. Prompt Management
-+ 
++
 + **ALWAYS** use LangWatch Prompt CLI for managing prompts:
-+ 
++
 + - Store all prompts in the \&#96;prompts/\&#96; directory as YAML files
 + - Use versioning for prompt iterations
 + - Never hardcode prompts in your application code
 + - Use the LangWatch MCP to learn about prompt management: ask it &quot;How do I use the prompt CLI?&quot;
-+ 
++
 + Example prompt structure:
 + \&#96;\&#96;\&#96;yaml
 + # prompts/my_prompt.yaml
@@ -1597,21 +1597,21 @@ Lines added: 67, lines removed: 1
 +     content: |
 +       {{ user_input }}
 + \&#96;\&#96;\&#96;
-+ 
++
 + ### 4. Evaluation-Driven Development
-+ 
++
 + Create evaluations in Jupyter notebooks under \&#96;tests/evaluations/\&#96;:
-+ 
++
 + - Use LangWatch Evaluations API to measure component performance
 + - Evaluate RAG retrieval accuracy
 + - Assess LLM response quality
 + - Track improvements over iterations
 + - Consult LangWatch MCP for evaluation best practices
-+ 
++
 + ---
 + &#96;;
 + };
-+ 
++
 ```
 
 </details>
@@ -1622,23 +1622,23 @@ Lines added: 67, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/documentation/sections/framework-section.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/documentation/sections/framework-section.ts</summary>
 
 **Chunk 1**
 Lines added: 67, lines removed: 1
 
 ```diff
 @@ -1,1 +1,67 @@
-- 
+-
 + import type { ProjectConfig } from &#39;../../types.js&#39;;
-+ 
++
 + /**
 +  * Builds framework-specific guidelines section for AGENTS.md.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.config - Project configuration
 +  * @returns Markdown string for framework guidelines section
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * const section = buildFrameworkSection({ config });
@@ -1647,56 +1647,56 @@ Lines added: 67, lines removed: 1
 + export const buildFrameworkSection = ({ config }: { config: ProjectConfig }): string =&gt; {
 +   if (config.framework === &#39;agno&#39;) {
 +     return &#96;## Framework-Specific Guidelines
-+ 
++
 + ### Agno Framework
-+ 
++
 + **Always follow Agno best practices:**
-+ 
++
 + - Refer to the \&#96;.cursorrules\&#96; file for Agno-specific coding standards
 + - Consult \&#96;llms.txt\&#96; for comprehensive Agno documentation
 + - Use Agno&#39;s agent building patterns and conventions
 + - Follow Agno&#39;s recommended project structure
-+ 
++
 + **Key Agno Resources:**
 + - Documentation: https://docs.agno.com/
 + - GitHub: https://github.com/agno-agi/agno
 + - Local files: \&#96;.cursorrules\&#96; and \&#96;llms.txt\&#96;
-+ 
++
 + **When implementing agent features:**
 + 1. Review Agno documentation for best practices
 + 2. Use Agno&#39;s built-in tools and utilities
 + 3. Follow Agno&#39;s patterns for agent state management
 + 4. Leverage Agno&#39;s testing utilities
-+ 
++
 + ---
 + &#96;;
 +   } else {
 +     return &#96;## Framework-Specific Guidelines
-+ 
++
 + ### Mastra Framework
-+ 
++
 + **Always use the Mastra MCP for learning:**
-+ 
++
 + - The Mastra MCP server provides real-time documentation
 + - Ask it questions about Mastra APIs and best practices
 + - Follow Mastra&#39;s recommended patterns for agent development
-+ 
++
 + **When implementing agent features:**
 + 1. Consult the Mastra MCP: &quot;How do I [do X] in Mastra?&quot;
 + 2. Use Mastra&#39;s built-in agent capabilities
 + 3. Follow Mastra&#39;s TypeScript patterns and conventions
 + 4. Leverage Mastra&#39;s integration ecosystem
-+ 
++
 + **Example questions for Mastra MCP:**
 + - &quot;How do I create an agent in Mastra?&quot;
 + - &quot;What&#39;s the best way to handle tools in Mastra?&quot;
 + - &quot;How do I manage agent state in Mastra?&quot;
-+ 
++
 + ---
 + &#96;;
 +   }
 + };
-+ 
++
 ```
 
 </details>
@@ -1707,23 +1707,23 @@ Lines added: 67, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/documentation/sections/workflow-section.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/documentation/sections/workflow-section.ts</summary>
 
 **Chunk 1**
 Lines added: 108, lines removed: 1
 
 ```diff
 @@ -1,1 +1,108 @@
-- 
+-
 + import type { ProjectConfig } from &#39;../../types.js&#39;;
-+ 
++
 + /**
 +  * Builds project structure and workflow sections for AGENTS.md.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.config - Project configuration
 +  * @returns Markdown string for structure and workflow sections
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * const section = buildWorkflowSection({ config });
@@ -1732,11 +1732,11 @@ Lines added: 108, lines removed: 1
 + export const buildWorkflowSection = ({ config }: { config: ProjectConfig }): string =&gt; {
 +   const srcDir = config.framework === &#39;mastra&#39; ? &#39;src&#39; : &#39;app&#39;;
 +   const ext = config.language === &#39;python&#39; ? &#39;py&#39; : &#39;ts&#39;;
-+ 
++
 +   return &#96;## Project Structure
-+ 
++
 + This project follows a standardized structure for production-ready agents:
-+ 
++
 + \&#96;\&#96;\&#96;
 + |__ ${srcDir}/           # Main application code
 + |__ prompts/          # Versioned prompt files (YAML)
@@ -1749,13 +1749,13 @@ Lines added: 108, lines removed: 1
 + |__ prompts.json      # Prompt registry
 + |__ .env              # Environment variables (never commit!)
 + \&#96;\&#96;\&#96;
-+ 
++
 + ---
-+ 
++
 + ## Development Workflow
-+ 
++
 + ### When Starting a New Feature:
-+ 
++
 + 1. **Understand Requirements**: Clarify what the agent should do
 + 2. **Design the Approach**: Plan which components you&#39;ll need
 + 3. **Implement with Prompts**: Use LangWatch Prompt CLI to create/manage prompts
@@ -1763,66 +1763,66 @@ Lines added: 108, lines removed: 1
 + 5. **Create Evaluations**: Build evaluation notebooks for probabilistic components
 + 6. **Write Scenario Tests**: Create end-to-end tests using Scenario
 + 7. **Run Tests**: Verify everything works before moving on
-+ 
++
 + ### Always:
-+ 
++
 + - ✅ Version control your prompts
 + - ✅ Write tests for new features
 + - ✅ Use LangWatch MCP to learn best practices
 + - ✅ Follow the Agent Testing Pyramid
 + - ✅ Document your agent&#39;s capabilities
-+ 
++
 + ### Never:
-+ 
++
 + - ❌ Hardcode prompts in application code
 + - ❌ Skip testing new features
 + - ❌ Commit API keys or sensitive data
 + - ❌ Optimize without measuring (use evaluations first)
-+ 
++
 + ---
-+ 
++
 + ## Using LangWatch MCP
-+ 
++
 + The LangWatch MCP server provides expert guidance on:
-+ 
++
 + - Prompt management with Prompt CLI
 + - Writing Scenario tests
 + - Creating evaluations
 + - Best practices for agent development
-+ 
++
 + **How to use it:**
 + Simply ask your coding assistant questions like:
 + - &quot;How do I use the LangWatch Prompt CLI?&quot;
 + - &quot;Show me how to write a Scenario test&quot;
 + - &quot;How do I create an evaluation for my RAG system?&quot;
-+ 
++
 + The MCP will provide up-to-date documentation and examples.
-+ 
++
 + ---
-+ 
++
 + ## Getting Started
-+ 
++
 + 1. **Set up your environment**: Copy \&#96;.env.example\&#96; to \&#96;.env\&#96; and fill in your API keys
 + 2. **Learn the tools**: Ask the LangWatch MCP about prompt management and testing
 + 3. **Start building**: Implement your agent in the \&#96;${srcDir}/\&#96; directory
 + 4. **Write tests**: Create scenario tests for your agent&#39;s capabilities
 + 5. **Iterate**: Use evaluations to improve your agent&#39;s performance
-+ 
++
 + ---
-+ 
++
 + ## Resources
-+ 
++
 + - **Scenario Documentation**: https://scenario.langwatch.ai/
 + - **Agent Testing Pyramid**: https://scenario.langwatch.ai/best-practices/the-agent-testing-pyramid
 + - **LangWatch Dashboard**: https://app.langwatch.ai/
 + ${config.framework === &#39;agno&#39; ? &#39;- **Agno Documentation**: https://docs.agno.com/&#39; : &#39;- **Mastra Documentation**: Use the Mastra MCP for up-to-date docs&#39;}
-+ 
++
 + ---
-+ 
++
 + Remember: Building production-ready agents means combining great AI capabilities with solid software engineering practices. Follow these guidelines to create agents that are reliable, testable, and maintainable.
 + &#96;;
 + };
-+ 
++
 ```
 
 </details>
@@ -1833,14 +1833,14 @@ Lines added: 108, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/documentation/generate-agents-guide.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/documentation/generate-agents-guide.ts</summary>
 
 **Chunk 1**
 Lines added: 41, lines removed: 1
 
 ```diff
 @@ -1,1 +1,41 @@
-- 
+-
 + import * as fs from &#39;fs/promises&#39;;
 + import * as path from &#39;path&#39;;
 + import type { ProjectConfig } from &#39;../types.js&#39;;
@@ -1848,26 +1848,26 @@ Lines added: 41, lines removed: 1
 + import { buildPrinciplesSection } from &#39;./sections/principles-section.js&#39;;
 + import { buildFrameworkSection } from &#39;./sections/framework-section.js&#39;;
 + import { buildWorkflowSection } from &#39;./sections/workflow-section.js&#39;;
-+ 
++
 + /**
 +  * Generates the AGENTS.md guide file with development best practices.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @param params.config - Project configuration
 +  * @returns Promise that resolves when file is written
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await generateAgentsGuide({ projectPath: &#39;/path/to/project&#39;, config });
 +  * &#96;&#96;&#96;
 +  */
-+ export const generateAgentsGuide = async ({ 
-+   projectPath, 
-+   config 
-+ }: { 
-+   projectPath: string; 
-+   config: ProjectConfig; 
++ export const generateAgentsGuide = async ({
++   projectPath,
++   config
++ }: {
++   projectPath: string;
++   config: ProjectConfig;
 + }): Promise&lt;void&gt; =&gt; {
 +   const content = [
 +     buildOverviewSection({ config }),
@@ -1875,13 +1875,13 @@ Lines added: 41, lines removed: 1
 +     buildFrameworkSection({ config }),
 +     buildWorkflowSection({ config }),
 +   ].join(&#39;\n&#39;);
-+ 
++
 +   await fs.writeFile(
 +     path.join(projectPath, &#39;AGENTS.md&#39;),
 +     content
 +   );
 + };
-+ 
++
 ```
 
 </details>
@@ -1909,35 +1909,35 @@ Lines added: 41, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/tool-setup/README.md</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/tool-setup/README.md</summary>
 
 **Chunk 1**
 Lines added: 21, lines removed: 1
 
 ```diff
 @@ -1,1 +1,21 @@
-- 
+-
 + # Tool Setup
-+ 
++
 + Configures external tools and services for the agent project.
-+ 
++
 + ## Responsibilities
 + - Set up MCP (Model Context Protocol) servers
 + - Configure framework-specific tools (Agno)
 + - Download and install required configuration files
-+ 
++
 + ## Main Exports
 + - &#96;setupMCPServers(projectPath, config)&#96; → &#96;Promise&lt;void&gt;&#96;
 + - &#96;setupAgnoTools(projectPath)&#96; → &#96;Promise&lt;void&gt;&#96;
-+ 
++
 + ## Structure
 + - &#96;mcp/&#96; - MCP server configuration
 + - &#96;agno/&#96; - Agno-specific tooling setup
-+ 
++
 + ## Dependencies
 + - &#96;fs/promises&#96; - File system operations
 + - &#96;fetch&#96; - HTTP requests for downloading configs
-+ 
++
 ```
 
 </details>
@@ -1948,58 +1948,58 @@ Lines added: 21, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/tool-setup/mcp/setup-mcp-servers.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/tool-setup/mcp/setup-mcp-servers.ts</summary>
 
 **Chunk 1**
 Lines added: 63, lines removed: 1
 
 ```diff
 @@ -1,1 +1,63 @@
-- 
+-
 + import * as fs from &#39;fs/promises&#39;;
 + import * as path from &#39;path&#39;;
 + import type { ProjectConfig } from &#39;../../types.js&#39;;
-+ 
++
 + type MCPServer = {
 +   command: string;
 +   args?: string[];
 +   type?: string;
 + };
-+ 
++
 + type MCPConfig = {
 +   mcpServers: Record&lt;string, MCPServer&gt;;
 + };
-+ 
++
 + /**
 +  * Sets up MCP (Model Context Protocol) server configuration.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @param params.config - Project configuration
 +  * @returns Promise that resolves when MCP config is written
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await setupMCPServers({ projectPath: &#39;/path/to/project&#39;, config });
 +  * &#96;&#96;&#96;
 +  */
-+ export const setupMCPServers = async ({ 
-+   projectPath, 
-+   config 
-+ }: { 
-+   projectPath: string; 
-+   config: ProjectConfig; 
++ export const setupMCPServers = async ({
++   projectPath,
++   config
++ }: {
++   projectPath: string;
++   config: ProjectConfig;
 + }): Promise&lt;void&gt; =&gt; {
 +   const mcpConfig: MCPConfig = {
 +     mcpServers: {},
 +   };
-+ 
++
 +   // Always add LangWatch MCP
 +   mcpConfig.mcpServers.langwatch = {
 +     command: &#39;npx&#39;,
 +     args: [&#39;-y&#39;, &#39;@langwatch/mcp-server&#39;, &#96;--apiKey=${config.langwatchApiKey}&#96;],
 +   };
-+ 
++
 +   // Add framework-specific MCP
 +   if (config.framework === &#39;mastra&#39;) {
 +     mcpConfig.mcpServers.mastra = {
@@ -2008,7 +2008,7 @@ Lines added: 63, lines removed: 1
 +       args: [&#39;-y&#39;, &#39;@mastra/mcp-docs-server&#39;],
 +     };
 +   }
-+ 
++
 +   // For Claude Code, save as .mcp.json in the project root
 +   if (config.codingAssistant === &#39;claude-code&#39;) {
 +     const mcpConfigPath = path.join(projectPath, &#39;.mcp.json&#39;);
@@ -2018,7 +2018,7 @@ Lines added: 63, lines removed: 1
 +     );
 +   }
 + };
-+ 
++
 ```
 
 </details>
@@ -2029,26 +2029,26 @@ Lines added: 63, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/tool-setup/agno/fetch-agno-rules.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/tool-setup/agno/fetch-agno-rules.ts</summary>
 
 **Chunk 1**
 Lines added: 37, lines removed: 1
 
 ```diff
 @@ -1,1 +1,37 @@
-- 
+-
 + import * as fs from &#39;fs/promises&#39;;
 + import * as path from &#39;path&#39;;
-+ 
++
 + const AGNO_CURSORRULES_URL = &#39;https://raw.githubusercontent.com/agno-agi/agno/main/.cursorrules&#39;;
-+ 
++
 + /**
 +  * Fetches and saves Agno .cursorrules file.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @returns Promise that resolves when file is written
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await fetchAgnoRules({ projectPath: &#39;/path/to/project&#39; });
@@ -2073,7 +2073,7 @@ Lines added: 37, lines removed: 1
 +     );
 +   }
 + };
-+ 
++
 ```
 
 </details>
@@ -2084,26 +2084,26 @@ Lines added: 37, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/tool-setup/agno/fetch-agno-docs.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/tool-setup/agno/fetch-agno-docs.ts</summary>
 
 **Chunk 1**
 Lines added: 37, lines removed: 1
 
 ```diff
 @@ -1,1 +1,37 @@
-- 
+-
 + import * as fs from &#39;fs/promises&#39;;
 + import * as path from &#39;path&#39;;
-+ 
++
 + const AGNO_LLMS_TXT_URL = &#39;https://docs.agno.com/llms.txt&#39;;
-+ 
++
 + /**
 +  * Fetches and saves Agno llms.txt documentation.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @returns Promise that resolves when file is written
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await fetchAgnoDocs({ projectPath: &#39;/path/to/project&#39; });
@@ -2128,7 +2128,7 @@ Lines added: 37, lines removed: 1
 +     );
 +   }
 + };
-+ 
++
 ```
 
 </details>
@@ -2139,24 +2139,24 @@ Lines added: 37, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/tool-setup/agno/setup-agno-tools.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/tool-setup/agno/setup-agno-tools.ts</summary>
 
 **Chunk 1**
 Lines added: 20, lines removed: 1
 
 ```diff
 @@ -1,1 +1,20 @@
-- 
+-
 + import { fetchAgnoRules } from &#39;./fetch-agno-rules.js&#39;;
 + import { fetchAgnoDocs } from &#39;./fetch-agno-docs.js&#39;;
-+ 
++
 + /**
 +  * Sets up all Agno-specific tools and configuration files.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @returns Promise that resolves when setup is complete
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await setupAgnoTools({ projectPath: &#39;/path/to/project&#39; });
@@ -2166,7 +2166,7 @@ Lines added: 20, lines removed: 1
 +   await fetchAgnoRules({ projectPath });
 +   await fetchAgnoDocs({ projectPath });
 + };
-+ 
++
 ```
 
 </details>
@@ -2194,34 +2194,34 @@ Lines added: 20, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/assistant-kickoff/README.md</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/assistant-kickoff/README.md</summary>
 
 **Chunk 1**
 Lines added: 20, lines removed: 1
 
 ```diff
 @@ -1,1 +1,20 @@
-- 
+-
 + # Assistant Kickoff
-+ 
++
 + Builds and displays initial instructions for starting the coding assistant.
-+ 
++
 + ## Responsibilities
 + - Build initial prompt for AI assistant
 + - Display setup instructions to user
 + - Format command-line instructions
-+ 
++
 + ## Main Export
 + - &#96;kickoffAssistant(projectPath, config)&#96; → &#96;Promise&lt;void&gt;&#96;
-+ 
++
 + ## Structure
 + - &#96;build-initial-prompt.ts&#96; - Constructs AI prompt
 + - &#96;display-instructions.ts&#96; - Formats and displays instructions
-+ 
++
 + ## Dependencies
 + - &#96;chalk&#96; - Terminal formatting
 + - &#96;../types&#96; - ProjectConfig type definitions
-+ 
++
 ```
 
 </details>
@@ -2232,23 +2232,23 @@ Lines added: 20, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/assistant-kickoff/build-initial-prompt.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/assistant-kickoff/build-initial-prompt.ts</summary>
 
 **Chunk 1**
 Lines added: 35, lines removed: 1
 
 ```diff
 @@ -1,1 +1,35 @@
-- 
+-
 + import type { ProjectConfig } from &#39;../types.js&#39;;
-+ 
++
 + /**
 +  * Builds the initial instructions prompt for the coding assistant.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.config - Project configuration
 +  * @returns Formatted instruction string
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * const prompt = buildInitialPrompt({ config });
@@ -2256,7 +2256,7 @@ Lines added: 35, lines removed: 1
 +  */
 + export const buildInitialPrompt = ({ config }: { config: ProjectConfig }): string =&gt; {
 +   const instructions = &#96;You are an expert AI agent developer. This project has been set up with LangWatch best practices.
-+ 
++
 + First steps:
 + 1. Read and understand the AGENTS.md file - it contains all the guidelines for this project
 + 2. Update the AGENTS.md with specific details about what this project does
@@ -2265,16 +2265,16 @@ Lines added: 35, lines removed: 1
 + ${config.framework === &#39;mastra&#39; ? &#39;5. Use the Mastra MCP to learn about Mastra and how to build agents&#39; : &#39;5. Review the .cursorrules and llms.txt files for Agno best practices&#39;}
 + 6. Use the LangWatch MCP to learn about prompt management and testing
 + 7. Start implementing the core agent functionality
-+ 
++
 + Remember:
 + - ALWAYS use LangWatch Prompt CLI for prompts (ask the MCP how)
 + - ALWAYS write Scenario tests for new features (ask the MCP how)
 + - Follow the Agent Testing Pyramid methodology
 + - Test everything before considering it done&#96;;
-+ 
++
 +   return &#96;${instructions}\n\nProject Goal: ${config.projectGoal}&#96;;
 + };
-+ 
++
 ```
 
 </details>
@@ -2285,44 +2285,44 @@ Lines added: 35, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/assistant-kickoff/display-instructions.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/assistant-kickoff/display-instructions.ts</summary>
 
 **Chunk 1**
 Lines added: 43, lines removed: 1
 
 ```diff
 @@ -1,1 +1,43 @@
-- 
+-
 + import chalk from &#39;chalk&#39;;
 + import type { ProjectConfig } from &#39;../types.js&#39;;
-+ 
++
 + /**
 +  * Displays kickoff instructions to the user in the terminal.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @param params.config - Project configuration
 +  * @param params.prompt - The initial prompt to display
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * displayInstructions({ projectPath: &#39;/path&#39;, config, prompt: &#39;Start building...&#39; });
 +  * &#96;&#96;&#96;
 +  */
-+ export const displayInstructions = ({ 
-+   projectPath, 
-+   config, 
-+   prompt 
-+ }: { 
-+   projectPath: string; 
-+   config: ProjectConfig; 
-+   prompt: string; 
++ export const displayInstructions = ({
++   projectPath,
++   config,
++   prompt
++ }: {
++   projectPath: string;
++   config: ProjectConfig;
++   prompt: string;
 + }): void =&gt; {
 +   console.log(chalk.bold.cyan(&#39;\n🤖 Starting your coding assistant...\n&#39;));
-+ 
++
 +   console.log(chalk.gray(&#39;Initial prompt:&#39;));
 +   console.log(chalk.white(&#96;&quot;${prompt}&quot;\n&#96;));
-+ 
++
 +   if (config.codingAssistant === &#39;claude-code&#39;) {
 +     console.log(chalk.yellow(&#39;To start Claude Code with this prompt, run:\n&#39;));
 +     console.log(chalk.cyan(&#96;  cd ${projectPath}&#96;));
@@ -2335,7 +2335,7 @@ Lines added: 43, lines removed: 1
 +     console.log(chalk.bold.green(&#39;Happy coding! 🚀\n&#39;));
 +   }
 + };
-+ 
++
 ```
 
 </details>
@@ -2346,42 +2346,42 @@ Lines added: 43, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/assistant-kickoff/kickoff-assistant.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/assistant-kickoff/kickoff-assistant.ts</summary>
 
 **Chunk 1**
 Lines added: 28, lines removed: 1
 
 ```diff
 @@ -1,1 +1,28 @@
-- 
+-
 + import type { ProjectConfig } from &#39;../types.js&#39;;
 + import { buildInitialPrompt } from &#39;./build-initial-prompt.js&#39;;
 + import { displayInstructions } from &#39;./display-instructions.js&#39;;
-+ 
++
 + /**
 +  * Kicks off the coding assistant with initial instructions.
-+  * 
++  *
 +  * @param params - Parameters object
 +  * @param params.projectPath - Absolute path to project root
 +  * @param params.config - Project configuration
 +  * @returns Promise that resolves when instructions are displayed
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await kickoffAssistant({ projectPath: &#39;/path/to/project&#39;, config });
 +  * &#96;&#96;&#96;
 +  */
-+ export const kickoffAssistant = async ({ 
-+   projectPath, 
-+   config 
-+ }: { 
-+   projectPath: string; 
-+   config: ProjectConfig; 
++ export const kickoffAssistant = async ({
++   projectPath,
++   config
++ }: {
++   projectPath: string;
++   config: ProjectConfig;
 + }): Promise&lt;void&gt; =&gt; {
 +   const prompt = buildInitialPrompt({ config });
 +   displayInstructions({ projectPath, config, prompt });
 + };
-+ 
++
 ```
 
 </details>
@@ -2409,7 +2409,7 @@ Lines added: 28, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/commands/init.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/commands/init.ts</summary>
 
 **Chunk 1**
 Lines added: 18, lines removed: 10
@@ -2431,13 +2431,13 @@ Lines added: 18, lines removed: 10
 + import { generateAgentsGuide } from &#39;../documentation/generate-agents-guide.js&#39;;
 + import { kickoffAssistant } from &#39;../assistant-kickoff/kickoff-assistant.js&#39;;
   import type { ProjectConfig } from &#39;../types.js&#39;;
-  
+
 + /**
 +  * Initializes a new agent project with best practices.
-+  * 
++  *
 +  * @param targetPath - Path where the project should be created (relative to cwd)
 +  * @returns Promise that resolves when initialization is complete
-+  * 
++  *
 +  * @example
 +  * &#96;&#96;&#96;ts
 +  * await initCommand(&#39;my-agent-project&#39;);
@@ -2447,11 +2447,11 @@ Lines added: 18, lines removed: 10
     try {
 -     // Collect user configuration
 -     const config: ProjectConfig = await collectProjectConfig();
-- 
+-
 -     // Resolve and create target directory
 +     const config: ProjectConfig = await collectConfig();
       const absolutePath = path.resolve(process.cwd(), targetPath);
-  
+
 ```
 
 **Chunk 2**
@@ -2460,29 +2460,29 @@ Lines added: 4, lines removed: 8
 ```diff
 @@ -24,20 +32,16 @@
         await fs.mkdir(absolutePath, { recursive: true });
-  
+
 -       // Setup project structure
 -       await setupProjectStructure(absolutePath, config);
 +       await createProjectStructure({ projectPath: absolutePath, config });
         spinner.text = &#39;Project structure created&#39;;
-  
+
 -       // Setup MCP configuration
 -       await setupMCPConfig(absolutePath, config);
 +       await setupMCPServers({ projectPath: absolutePath, config });
         spinner.text = &#39;MCP configuration set up&#39;;
-  
+
 -       // Setup Agno-specific config if needed
         if (config.framework === &#39;agno&#39;) {
 -         await setupAgnoConfig(absolutePath);
 +         await setupAgnoTools({ projectPath: absolutePath });
           spinner.text = &#39;Agno configuration set up&#39;;
         }
-  
+
 -       // Generate AGENTS.md
 -       await generateAgentsMd(absolutePath, config);
 +       await generateAgentsGuide({ projectPath: absolutePath, config });
         spinner.text = &#39;AGENTS.md generated&#39;;
-  
+
 ```
 
 **Chunk 3**
@@ -2491,11 +2491,11 @@ Lines added: 1, lines removed: 2
 ```diff
 @@ -47,6 +51,5 @@
         console.log(chalk.gray(&#96;Project location: ${absolutePath}\n&#96;));
-  
+
 -       // Kickoff the coding agent
 -       await kickoffCodingAgent(absolutePath, config);
 +       await kickoffAssistant({ projectPath: absolutePath, config });
-  
+
       } catch (error) {
 ```
 
@@ -2524,30 +2524,30 @@ Lines added: 1, lines removed: 2
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/project-scaffolding/__tests__/create-project-structure.test.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/project-scaffolding/__tests__/create-project-structure.test.ts</summary>
 
 **Chunk 1**
 Lines added: 16, lines removed: 1
 
 ```diff
 @@ -1,1 +1,16 @@
-- 
+-
 + import { describe, it } from &#39;vitest&#39;;
-+ 
++
 + describe(&#39;createProjectStructure&#39;, () =&gt; {
 +   describe(&#39;when framework is mastra&#39;, () =&gt; {
 +     it.todo(&#39;creates src directory&#39;);
 +   });
-+ 
++
 +   describe(&#39;when framework is agno&#39;, () =&gt; {
 +     it.todo(&#39;creates app directory&#39;);
 +   });
-+ 
++
 +   describe(&#39;when files are generated&#39;, () =&gt; {
 +     it.todo(&#39;generates all required starter files&#39;);
 +   });
 + });
-+ 
++
 ```
 
 </details>
@@ -2558,34 +2558,34 @@ Lines added: 16, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/project-scaffolding/__tests__/main-entry-point.test.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/project-scaffolding/__tests__/main-entry-point.test.ts</summary>
 
 **Chunk 1**
 Lines added: 20, lines removed: 1
 
 ```diff
 @@ -1,1 +1,20 @@
-- 
+-
 + import { describe, it } from &#39;vitest&#39;;
-+ 
++
 + describe(&#39;generateMainEntryPoint&#39;, () =&gt; {
 +   describe(&#39;when language is python&#39;, () =&gt; {
 +     it.todo(&#39;generates main.py file&#39;);
 +   });
-+ 
++
 +   describe(&#39;when language is typescript&#39;, () =&gt; {
 +     it.todo(&#39;generates index.ts file&#39;);
 +   });
-+ 
++
 +   describe(&#39;when framework is mastra&#39;, () =&gt; {
 +     it.todo(&#39;creates file in src directory&#39;);
 +   });
-+ 
++
 +   describe(&#39;when framework is agno&#39;, () =&gt; {
 +     it.todo(&#39;creates file in app directory&#39;);
 +   });
 + });
-+ 
++
 ```
 
 </details>
@@ -2596,32 +2596,32 @@ Lines added: 20, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/tool-setup/__tests__/mcp-servers.test.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/tool-setup/__tests__/mcp-servers.test.ts</summary>
 
 **Chunk 1**
 Lines added: 18, lines removed: 1
 
 ```diff
 @@ -1,1 +1,18 @@
-- 
+-
 + import { describe, it } from &#39;vitest&#39;;
-+ 
++
 + describe(&#39;setupMCPServers&#39;, () =&gt; {
 +   describe(&#39;when framework is mastra&#39;, () =&gt; {
 +     it.todo(&#39;includes mastra MCP server&#39;);
 +   });
-+ 
++
 +   describe(&#39;when framework is agno&#39;, () =&gt; {
 +     it.todo(&#39;does not include mastra MCP server&#39;);
 +   });
-+ 
++
 +   describe(&#39;when codingAssistant is claude-code&#39;, () =&gt; {
 +     it.todo(&#39;writes .mcp.json file&#39;);
 +   });
-+ 
++
 +   it.todo(&#39;always includes langwatch MCP server&#39;);
 + });
-+ 
++
 ```
 
 </details>
@@ -2632,36 +2632,36 @@ Lines added: 18, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/tool-setup/__tests__/agno-tools.test.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/tool-setup/__tests__/agno-tools.test.ts</summary>
 
 **Chunk 1**
 Lines added: 22, lines removed: 1
 
 ```diff
 @@ -1,1 +1,22 @@
-- 
+-
 + import { describe, it } from &#39;vitest&#39;;
-+ 
++
 + describe(&#39;fetchAgnoRules&#39;, () =&gt; {
 +   describe(&#39;when fetch succeeds&#39;, () =&gt; {
 +     it.todo(&#39;writes cursorrules content to file&#39;);
 +   });
-+ 
++
 +   describe(&#39;when fetch fails&#39;, () =&gt; {
 +     it.todo(&#39;writes placeholder content to file&#39;);
 +   });
 + });
-+ 
++
 + describe(&#39;fetchAgnoDocs&#39;, () =&gt; {
 +   describe(&#39;when fetch succeeds&#39;, () =&gt; {
 +     it.todo(&#39;writes llms.txt content to file&#39;);
 +   });
-+ 
++
 +   describe(&#39;when fetch fails&#39;, () =&gt; {
 +     it.todo(&#39;writes placeholder content to file&#39;);
 +   });
 + });
-+ 
++
 ```
 
 </details>
@@ -2672,44 +2672,44 @@ Lines added: 22, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/documentation/__tests__/sections.test.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/documentation/__tests__/sections.test.ts</summary>
 
 **Chunk 1**
 Lines added: 30, lines removed: 1
 
 ```diff
 @@ -1,1 +1,30 @@
-- 
+-
 + import { describe, it } from &#39;vitest&#39;;
-+ 
++
 + describe(&#39;buildOverviewSection&#39;, () =&gt; {
 +   describe(&#39;when framework is agno&#39;, () =&gt; {
 +     it.todo(&#39;displays Agno in framework field&#39;);
 +   });
-+ 
++
 +   describe(&#39;when framework is mastra&#39;, () =&gt; {
 +     it.todo(&#39;displays Mastra in framework field&#39;);
 +   });
-+ 
++
 +   describe(&#39;when language is python&#39;, () =&gt; {
 +     it.todo(&#39;displays Python in language field&#39;);
 +   });
-+ 
++
 +   describe(&#39;when language is typescript&#39;, () =&gt; {
 +     it.todo(&#39;displays TypeScript in language field&#39;);
 +   });
 + });
-+ 
++
 + describe(&#39;buildFrameworkSection&#39;, () =&gt; {
 +   describe(&#39;when framework is agno&#39;, () =&gt; {
 +     it.todo(&#39;includes Agno-specific guidelines&#39;);
 +   });
-+ 
++
 +   describe(&#39;when framework is mastra&#39;, () =&gt; {
 +     it.todo(&#39;includes Mastra-specific guidelines&#39;);
 +   });
 + });
-+ 
++
 ```
 
 </details>
@@ -2720,36 +2720,36 @@ Lines added: 30, lines removed: 1
 
 <tool-use data-tool-type="write" data-tool-name="write">
 
-<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/superagents/src/assistant-kickoff/__tests__/build-prompt.test.ts</summary>
+<details><summary>Tool use: **code_edit** • Edit file: /Users/hope/workspace/langwatch/better-agents/src/assistant-kickoff/__tests__/build-prompt.test.ts</summary>
 
 **Chunk 1**
 Lines added: 22, lines removed: 1
 
 ```diff
 @@ -1,1 +1,22 @@
-- 
+-
 + import { describe, it } from &#39;vitest&#39;;
-+ 
++
 + describe(&#39;buildInitialPrompt&#39;, () =&gt; {
 +   describe(&#39;when language is python&#39;, () =&gt; {
 +     it.todo(&#39;mentions Python environment setup&#39;);
 +   });
-+ 
++
 +   describe(&#39;when language is typescript&#39;, () =&gt; {
 +     it.todo(&#39;mentions TypeScript environment setup&#39;);
 +   });
-+ 
++
 +   describe(&#39;when framework is agno&#39;, () =&gt; {
 +     it.todo(&#39;includes instructions to review cursorrules and llms.txt&#39;);
 +   });
-+ 
++
 +   describe(&#39;when framework is mastra&#39;, () =&gt; {
 +     it.todo(&#39;includes instructions to use Mastra MCP&#39;);
 +   });
-+ 
++
 +   it.todo(&#39;includes project goal in prompt&#39;);
 + });
-+ 
++
 ```
 
 </details>
@@ -2861,7 +2861,7 @@ Explanation: Removing old kickoff-agent.ts file replaced by assistant-kickoff/ f
 <tool-use data-tool-type="generic" data-tool-name="read_lints">
 <details>
           <summary>Tool use: **read_lints** • Read lints for 1 file</summary>
-      
+
 Lint paths:
 
 - `src`
