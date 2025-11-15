@@ -40,9 +40,9 @@ The `.mcp.json` comes with all the right MCPs set up so you coding assistant bec
 
 [`scenarios/`](https://github.com/langwatch/scenario) tests guarantee the agent behaves as expected, which simulates a conversation with the agent making sure it does what expected.
 
-`evaluations/` notebooks holds dataset and notebooks for evaluating pieces of your agent pipeline such as a RAG or classification tasks it must do
+[`evaluations/`](https://docs.langwatch.ai/llm-evaluation/offline/code/evaluation-api) notebooks holds dataset and notebooks for evaluating pieces of your agent pipeline such as a RAG or classification tasks it must do
 
-Finally, `prompts/` hold all your versioned prompts in yaml format, synced and controlled by `prompts.json`, to allow for playground and team collaboration.
+Finally, [`prompts/`](https://docs.langwatch.ai/prompt-management/cli) hold all your versioned prompts in yaml format, synced and controlled by `prompts.json`, to allow for playground and team collaboration.
 
 ## Getting Started
 
