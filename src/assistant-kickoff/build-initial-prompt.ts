@@ -38,6 +38,9 @@ First steps:
 6. Execute any installation steps needed yourself, for the library dependencies, the CLI tools, etc
 7. Use the LangWatch MCP to learn about prompt management and testing
 8. Start implementing the core agent functionality
+9. Instrument the agent with LangWatch
+10. Use Scenario tests to ensure the agent is working as expected, integrate with the agent and consider it done only when all scenarios pass
+11. If available from the framework, open a dev server for the user in the background and give them the url so they can play with the agent themselves
 
 
 Remember:

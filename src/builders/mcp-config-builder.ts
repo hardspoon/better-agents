@@ -30,7 +30,7 @@ export const buildMCPConfig = async ({
   // Always add LangWatch MCP
   mcpConfig.mcpServers.langwatch = {
     command: "npx",
-    args: ["-y", "@langwatch/mcp-server", `--apiKey=${config.langwatchApiKey}`],
+    args: ["-y", "@langwatch/mcp-server"],
   };
 
   // Add Smithery Toolbox MCP if API key provided
