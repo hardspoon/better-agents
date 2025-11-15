@@ -581,3 +581,69 @@ Since your output names (`release_created`, `tag_name`) don't contain hyphens or
 
 ---
 
+_**User (2025-11-15 06:33Z)**_
+
+getting this error from release-please
+
+
+
+
+
+✔ Successfully created a tree with the desired changes with SHA caf76b1feb615955207e58259c2264148454f576
+
+✔ Successfully created commit. See commit at https://api.github.com/repos/langwatch/better-agents/git/commits/127513cdb3fdbbf05105b47e27f956017b16af22
+
+✔ Updating reference heads/release-please--branches--main--components--better-agents to 127513cdb3fdbbf05105b47e27f956017b16af22
+
+✔ Successfully updated reference release-please--branches--main--components--better-agents to 127513cdb3fdbbf05105b47e27f956017b16af22
+
+Error: release-please failed: GitHub Actions is not permitted to create or approve pull requests. - https://docs.github.com/rest/pulls/pulls#create-a-pull-request
+
+
+
+
+
+what should I do?
+
+---
+
+_**Agent (model grok-code-fast-1, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+The user is getting an error from release-please. The error is "GitHub Actions is not permitted to create or approve pull requests." This suggests that the release-please workflow is trying to create a pull request but doesn't have the necessary permissions.
+
+
+## Investigating Error Cause  
+- The error "GitHub Actions is not permitted to create or approve pull requests" appeared during the release-please workflow.  
+- This indicates the workflow lacks necessary permissions to create or approve pull requests on GitHub.</details></think>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: .github/workflows/release-please.yml</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+I see the workflow has the correct permissions (`pull-requests: write`), but the error suggests that GitHub Actions is not permitted to create or approve pull requests. This is a repository-level setting that restricts what GitHub Actions can do.
+</details></think>
+
+---
+
+This is a repository settings issue, not a workflow configuration problem. The workflow has the correct `pull-requests: write` permission, but your repository has restrictions that prevent GitHub Actions from creating pull requests.
+
+You need to update your repository settings:
+
+1. Go to your repository on GitHub
+2. Navigate to **Settings** → **Actions** → **General**
+3. Under **"Workflow permissions"**, change from **"Read repository contents permission"** to **"Read and write permissions"**
+
+Alternatively, if you want more granular control, you can check **"Allow GitHub Actions to create and approve pull requests"** specifically.
+
+This is a common security setting that organizations enable to prevent workflows from accidentally creating PRs. Once you update this setting, release-please should work correctly and be able to create its release PRs.
+
+---
+
