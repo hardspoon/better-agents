@@ -28,8 +28,10 @@ export const kickoffAssistant = async ({
 
   logger.userSuccess('Project setup complete!');
   logger.userInfo('Initial prompt:');
-  logger.userInfo(`"${prompt}"`);
-  logger.userInfo(`Project location: ${projectPath}`);
+  logger.userInfo('--------------------------------');
+  logger.userInfo(`${prompt}`);
+  logger.userInfo('--------------------------------');
+  logger.userInfo(`Go to the project directory:\n\n    cd ${projectPath}\n`);
 
   // Let the provider handle its own launch behavior
   await provider.launch({ projectPath, prompt });
