@@ -2,7 +2,7 @@
 
 ## 🎯 Framework Integration
 
-- **Agno**: Automatically downloads `.cursorrules` and `llms.txt`
+- **Agno**: Configures Agno MCP for real-time documentation
 - **Mastra**: Configures Mastra MCP for real-time documentation
 
 ## 🧪 LangWatch Integration
@@ -11,12 +11,6 @@
 - **Scenario Testing**: End-to-end agent testing
 - **Evaluations**: Measure component performance
 - **MCP Server**: Expert guidance built into your coding assistant
-
-## 🔧 MCP Tool Integration
-
-- **Smithery Toolbox** (optional): When you provide a Smithery API key during setup, your coding agent gets automatic access to MCP tools for enhanced capabilities
-- Auto-configured in `.mcp.json` for seamless integration
-- Your coding assistant can discover and use tools to help build your agent
 
 ## 🤖 Coding Assistant Setup
 
